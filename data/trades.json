@@ -1,0 +1,260 @@
+// /api/trades.js — Paper Trading CRUD
+// GET    /api/trades              → fetch all trades
+// POST   /api/trades              → add new trade        (auth required)
+// PUT    /api/trades              → update trade (close/edit) (auth required)
+// DELETE /api/trades?id=xxx       → delete trade         (auth required)
+
+const TRADES_PATH = "data/trades.json";
+
+const GH_HEADERS = (token) => ({
+  Authorization: `Bearer ${token}`,
+  "Content-Type": "application/json",
+  "User-Agent": "MF-Intelligence"
+});
+
+async function ghGet(owner, repo, path, token) {
+  return fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
+    { headers: GH_HEADERS(token) }
+  );
+}
+
+async function ghPut(owner, repo, path, token, message, contentB64, sha = null) {
+  const body = { message, content: contentB64 };
+  if (sha) body.sha = sha;
+  return fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
+    { method: "PUT", headers: GH_HEADERS(token), body: JSON.stringify(body) }
+  );
+}
+
+async function getSha(owner, repo, path, token) {
+  try {
+    const res = await ghGet(owner, repo, path, token);
+    if (res.ok) {
+      const j = await res.json();
+      return j.sha;
+    }
+  } catch (e) {}
+  return null;
+}
+
+async function readTrades(owner, repo, token) {
+  try {
+    const res = await ghGet(owner, repo, TRADES_PATH, token);
+    if (!res.ok) return { trades: [], sha: null };
+    const j = await res.json();
+    const text = Buffer.from(j.content, "base64").toString("utf8");
+    return { trades: JSON.parse(text), sha: j.sha };
+  } catch (e) {
+    return { trades: [], sha: null };
+  }
+}
+
+async function writeTrades(owner, repo, token, trades, sha, message) {
+  const contentB64 = Buffer.from(JSON.stringify(trades, null, 2)).toString("base64");
+  const res = await ghPut(owner, repo, TRADES_PATH, token, message, contentB64, sha);
+  return res.ok;
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function nowIST() {
+  return new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+}
+
+function calcPL(entry, exitPrice) {
+  if (!exitPrice || !entry) return 0;
+  return Math.round(((exitPrice - entry) / entry) * 10000) / 100;
+}
+
+// ── Stats aggregator ─────────────────────────────────────────────────────────
+
+function computeStats(trades) {
+  const closed = trades.filter(t => t.closed);
+  const open = trades.filter(t => !t.closed);
+
+  if (!closed.length) return { winRate: 0, avgReturn: 0, totalPL: 0, closed: 0, open: open.length, bestTrade: null, worstTrade: null };
+
+  const wins = closed.filter(t => (t.exitPrice || t.entry) > t.entry);
+  const returns = closed.map(t => calcPL(t.entry, t.exitPrice));
+  const totalPL = returns.reduce((a, b) => a + b, 0);
+  const avgReturn = Math.round((totalPL / closed.length) * 100) / 100;
+  const best = closed.reduce((a, b) => calcPL(b.entry, b.exitPrice) > calcPL(a.entry, a.exitPrice) ? b : a, closed[0]);
+  const worst = closed.reduce((a, b) => calcPL(b.entry, b.exitPrice) < calcPL(a.entry, a.exitPrice) ? b : a, closed[0]);
+
+  // Sector breakdown
+  const sectorMap = {};
+  closed.forEach(t => {
+    if (!sectorMap[t.sec]) sectorMap[t.sec] = { trades: 0, wins: 0, totalReturn: 0 };
+    sectorMap[t.sec].trades++;
+    if ((t.exitPrice || t.entry) > t.entry) sectorMap[t.sec].wins++;
+    sectorMap[t.sec].totalReturn += calcPL(t.entry, t.exitPrice);
+  });
+
+  // Streak
+  let streak = 0, curStreak = 0, streakType = null;
+  [...closed].reverse().forEach(t => {
+    const won = (t.exitPrice || t.entry) > t.entry;
+    if (streakType === null) { streakType = won; curStreak = 1; }
+    else if (won === streakType) curStreak++;
+    else { if (!streak) streak = curStreak; streakType = won; curStreak = 1; }
+  });
+  if (!streak) streak = curStreak;
+
+  return {
+    winRate: Math.round((wins.length / closed.length) * 100),
+    avgReturn,
+    totalPL: Math.round(totalPL * 100) / 100,
+    closed: closed.length,
+    open: open.length,
+    wins: wins.length,
+    losses: closed.length - wins.length,
+    bestTrade: best ? { stock: best.stock, pl: calcPL(best.entry, best.exitPrice) } : null,
+    worstTrade: worst ? { stock: worst.stock, pl: calcPL(worst.entry, worst.exitPrice) } : null,
+    streak,
+    streakType,
+    sectorBreakdown: sectorMap
+  };
+}
+
+// ── Main handler ──────────────────────────────────────────────────────────────
+
+export default async function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") return res.status(200).end();
+
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+  const GITHUB_TOKEN   = process.env.GITHUB_TOKEN;
+  const GITHUB_OWNER   = process.env.GITHUB_OWNER;
+  const GITHUB_REPO    = process.env.GITHUB_REPO || "mf-intelligence-data";
+
+  if (!GITHUB_TOKEN || !GITHUB_OWNER) {
+    return res.status(500).json({ error: "Server not configured" });
+  }
+
+  // ── GET — fetch all trades + stats (public read) ──────────────────────────
+  if (req.method === "GET") {
+    try {
+      const { trades } = await readTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN);
+      const stats = computeStats(trades);
+      return res.status(200).json({ trades, stats });
+    } catch (e) {
+      return res.status(500).json({ error: e.message });
+    }
+  }
+
+  // All write methods require auth
+  const body = req.body || {};
+  if (body.password !== ADMIN_PASSWORD) {
+    return res.status(401).json({ error: "Wrong password" });
+  }
+
+  // ── POST — add new trade ──────────────────────────────────────────────────
+  if (req.method === "POST") {
+    try {
+      const { stock, sec, entry, target, sl, qty, source, notes, tags } = body;
+
+      if (!stock || !entry) return res.status(400).json({ error: "stock and entry are required" });
+
+      const { trades, sha } = await readTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN);
+
+      const newTrade = {
+        id: `T${Date.now()}`,
+        stock: stock.toUpperCase().trim(),
+        sec: sec || "",
+        entry: parseFloat(entry),
+        target: target ? parseFloat(target) : null,
+        sl: sl ? parseFloat(sl) : null,
+        qty: qty || 1,
+        source: source || "Manual",
+        notes: notes || "",
+        tags: tags || [],
+        date: nowIST(),
+        ts: Date.now(),
+        closed: false,
+        exitPrice: null,
+        exitDate: null,
+        exitReason: null,
+        pnlPct: null
+      };
+
+      trades.push(newTrade);
+      await writeTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN, trades, sha,
+        `New trade: ${newTrade.stock} @ ${newTrade.entry} (${nowIST()})`);
+
+      return res.status(200).json({ success: true, trade: newTrade, stats: computeStats(trades) });
+    } catch (e) {
+      return res.status(500).json({ error: e.message });
+    }
+  }
+
+  // ── PUT — update trade (close, edit notes, modify targets) ───────────────
+  if (req.method === "PUT") {
+    try {
+      const { id, action, exitPrice, exitReason, target, sl, qty, notes, tags } = body;
+
+      if (!id) return res.status(400).json({ error: "trade id required" });
+
+      const { trades, sha } = await readTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN);
+      const idx = trades.findIndex(t => t.id === id);
+      if (idx === -1) return res.status(404).json({ error: "Trade not found" });
+
+      const trade = trades[idx];
+
+      if (action === "close") {
+        const ep = parseFloat(exitPrice) || trade.entry;
+        trade.closed = true;
+        trade.exitPrice = ep;
+        trade.exitDate = nowIST();
+        trade.exitReason = exitReason || "Manual";
+        trade.pnlPct = calcPL(trade.entry, ep);
+      } else if (action === "reopen") {
+        trade.closed = false;
+        trade.exitPrice = null;
+        trade.exitDate = null;
+        trade.exitReason = null;
+        trade.pnlPct = null;
+      } else {
+        // Edit fields
+        if (target !== undefined) trade.target = target ? parseFloat(target) : null;
+        if (sl !== undefined) trade.sl = sl ? parseFloat(sl) : null;
+        if (qty !== undefined) trade.qty = qty;
+        if (notes !== undefined) trade.notes = notes;
+        if (tags !== undefined) trade.tags = tags;
+      }
+
+      trades[idx] = trade;
+      await writeTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN, trades, sha,
+        `Update trade: ${trade.stock} — ${action || "edit"}`);
+
+      return res.status(200).json({ success: true, trade, stats: computeStats(trades) });
+    } catch (e) {
+      return res.status(500).json({ error: e.message });
+    }
+  }
+
+  // ── DELETE — remove trade ─────────────────────────────────────────────────
+  if (req.method === "DELETE") {
+    try {
+      const id = req.query?.id || body.id;
+      if (!id) return res.status(400).json({ error: "trade id required" });
+
+      const { trades, sha } = await readTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN);
+      const trade = trades.find(t => t.id === id);
+      if (!trade) return res.status(404).json({ error: "Trade not found" });
+
+      const updated = trades.filter(t => t.id !== id);
+      await writeTrades(GITHUB_OWNER, GITHUB_REPO, GITHUB_TOKEN, updated, sha,
+        `Delete trade: ${trade.stock} (${id})`);
+
+      return res.status(200).json({ success: true, deleted: id, stats: computeStats(updated) });
+    } catch (e) {
+      return res.status(500).json({ error: e.message });
+    }
+  }
+
+  return res.status(405).json({ error: "Method not allowed" });
+}
