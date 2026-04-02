@@ -1,0 +1,2233 @@
+{
+  "signals": {
+    "360ONE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 953,
+      "pr": 949.55,
+      "d1": "0.36",
+      "d2": "0.36",
+      "prem": "0.483",
+      "vol": "41.7"
+    },
+    "ABB": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 6062.75,
+      "pr": 5941.4,
+      "d1": "2.04",
+      "d2": "2.04",
+      "prem": "0.507",
+      "vol": "36.9"
+    },
+    "ABCAPITAL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 302.9,
+      "pr": 292.25,
+      "d1": "3.64",
+      "d2": "3.64",
+      "prem": "0.281",
+      "vol": "39.7"
+    },
+    "ADANIENSOL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 956.6,
+      "pr": 934.85,
+      "d1": "2.33",
+      "d2": "2.33",
+      "prem": "0.528",
+      "vol": "54.1"
+    },
+    "ADANIENT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1842.5,
+      "pr": 1758.8,
+      "d1": "4.76",
+      "d2": "4.76",
+      "prem": "0.510",
+      "vol": "49.0"
+    },
+    "ADANIGREEN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 851.95,
+      "pr": 806.9,
+      "d1": "5.58",
+      "d2": "5.58",
+      "prem": "0.293",
+      "vol": "57.8"
+    },
+    "ADANIPORTS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1385.4,
+      "pr": 1312.65,
+      "d1": "5.54",
+      "d2": "5.54",
+      "prem": "0.289",
+      "vol": "40.2"
+    },
+    "ADANIPOWER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 157.1,
+      "pr": 150.45,
+      "d1": "4.42",
+      "d2": "4.42",
+      "prem": "0.586",
+      "vol": "52.7"
+    },
+    "ALKEM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 5244.45,
+      "pr": 5299,
+      "d1": "-1.03",
+      "d2": "-1.03",
+      "prem": "0.211",
+      "vol": "28.4"
+    },
+    "AMBER": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 6579.05,
+      "pr": 6549.05,
+      "d1": "0.46",
+      "d2": "0.46",
+      "prem": "-1.285",
+      "vol": "52.9"
+    },
+    "AMBUJACEM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 420.35,
+      "pr": 401.25,
+      "d1": "4.76",
+      "d2": "4.76",
+      "prem": "0.321",
+      "vol": "35.9"
+    },
+    "ANGELONE": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 240.6,
+      "pr": 227.55,
+      "d1": "5.74",
+      "d2": "5.74",
+      "prem": "-0.320",
+      "vol": "55.2"
+    },
+    "APLAPOLLO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1934.8,
+      "pr": 1937,
+      "d1": "-0.11",
+      "d2": "-0.11",
+      "prem": "0.662",
+      "vol": "34.2"
+    },
+    "APOLLOHOSP": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 7305.45,
+      "pr": 7419.05,
+      "d1": "-1.53",
+      "d2": "-1.53",
+      "prem": "0.582",
+      "vol": "25.5"
+    },
+    "ASHOKLEY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 149.1,
+      "pr": 154.15,
+      "d1": "-3.28",
+      "d2": "-3.28",
+      "prem": "0.537",
+      "vol": "39.5"
+    },
+    "ASIANPAINT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2225.8,
+      "pr": 2165.2,
+      "d1": "2.80",
+      "d2": "2.80",
+      "prem": "0.261",
+      "vol": "28.3"
+    },
+    "ASTRAL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1570.35,
+      "pr": 1598.95,
+      "d1": "-1.79",
+      "d2": "-1.79",
+      "prem": "0.207",
+      "vol": "35.7"
+    },
+    "AUBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 874.9,
+      "pr": 842.7,
+      "d1": "3.82",
+      "d2": "3.82",
+      "prem": "0.417",
+      "vol": "37.3"
+    },
+    "AUROPHARMA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1342.1,
+      "pr": 1304.4,
+      "d1": "2.89",
+      "d2": "2.89",
+      "prem": "0.253",
+      "vol": "33.9"
+    },
+    "AXISBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1193.1,
+      "pr": 1161.3,
+      "d1": "2.74",
+      "d2": "2.74",
+      "prem": "0.645",
+      "vol": "28.8"
+    },
+    "BAJAJ-AUTO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 8895.55,
+      "pr": 8781.45,
+      "d1": "1.30",
+      "d2": "1.30",
+      "prem": "0.140",
+      "vol": "29.4"
+    },
+    "BAJAJFINSV": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1647,
+      "pr": 1631.8,
+      "d1": "0.93",
+      "d2": "0.93",
+      "prem": "0.589",
+      "vol": "29.7"
+    },
+    "BAJAJHLDNG": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 8906.85,
+      "pr": 8745.95,
+      "d1": "1.84",
+      "d2": "1.84",
+      "prem": "0.524",
+      "vol": "38.2"
+    },
+    "BAJFINANCE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 817.3,
+      "pr": 801.55,
+      "d1": "1.96",
+      "d2": "1.96",
+      "prem": "0.600",
+      "vol": "35.0"
+    },
+    "BANDHANBNK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 147.65,
+      "pr": 141.35,
+      "d1": "4.46",
+      "d2": "4.46",
+      "prem": "0.332",
+      "vol": "44.3"
+    },
+    "BANKBARODA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 252.05,
+      "pr": 247.6,
+      "d1": "1.80",
+      "d2": "1.80",
+      "prem": "0.615",
+      "vol": "36.3"
+    },
+    "BANKEX": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 57883.1,
+      "pr": 56580.74,
+      "d1": "2.30",
+      "d2": "2.30",
+      "prem": "0.438",
+      "vol": "20.6"
+    },
+    "BANKINDIA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 141.7,
+      "pr": 137,
+      "d1": "3.43",
+      "d2": "3.43",
+      "prem": "0.614",
+      "vol": "42.5"
+    },
+    "BANKNIFTY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 51448.65,
+      "pr": 50275.35,
+      "d1": "2.33",
+      "d2": "2.33",
+      "prem": "0.653",
+      "vol": "20.0"
+    },
+    "BDL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1203.95,
+      "pr": 1096.65,
+      "d1": "9.78",
+      "d2": "9.78",
+      "prem": "0.444",
+      "vol": "54.0"
+    },
+    "BEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 418.7,
+      "pr": 400.65,
+      "d1": "4.51",
+      "d2": "4.51",
+      "prem": "0.466",
+      "vol": "37.9"
+    },
+    "BHARATFORG": {
+      "score": 4.82,
+      "label": "Strong Bullish",
+      "cl": 1668.4,
+      "pr": 1674.6,
+      "d1": "-0.37",
+      "d2": "-0.37",
+      "prem": "0.102",
+      "vol": "39.3"
+    },
+    "BHARTIARTL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1781.9,
+      "pr": 1782.4,
+      "d1": "-0.03",
+      "d2": "-0.03",
+      "prem": "0.600",
+      "vol": "24.5"
+    },
+    "BHEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 251.85,
+      "pr": 245.5,
+      "d1": "2.59",
+      "d2": "2.59",
+      "prem": "0.592",
+      "vol": "46.6"
+    },
+    "BIOCON": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 365.2,
+      "pr": 360.9,
+      "d1": "1.19",
+      "d2": "1.19",
+      "prem": "0.520",
+      "vol": "36.0"
+    },
+    "BLUESTARCO": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1556.3,
+      "pr": 1610.7,
+      "d1": "-3.38",
+      "d2": "-3.38",
+      "prem": "-0.488",
+      "vol": "42.0"
+    },
+    "BOSCHLTD": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 30634.35,
+      "pr": 28744.75,
+      "d1": "6.57",
+      "d2": "6.57",
+      "prem": "0.688",
+      "vol": "33.1"
+    },
+    "BPCL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 281.25,
+      "pr": 281,
+      "d1": "0.09",
+      "d2": "0.09",
+      "prem": "0.196",
+      "vol": "36.0"
+    },
+    "BRITANNIA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 5474,
+      "pr": 5423.1,
+      "d1": "0.94",
+      "d2": "0.94",
+      "prem": "0.566",
+      "vol": "24.6"
+    },
+    "BSE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2867.6,
+      "pr": 2683.5,
+      "d1": "6.86",
+      "d2": "6.86",
+      "prem": "0.554",
+      "vol": "59.2"
+    },
+    "CAMS": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 655.4,
+      "pr": 625.8,
+      "d1": "4.73",
+      "d2": "4.73",
+      "prem": "-0.320",
+      "vol": "40.7"
+    },
+    "CANBK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 127.3,
+      "pr": 123.45,
+      "d1": "3.12",
+      "d2": "3.12",
+      "prem": "0.707",
+      "vol": "38.4"
+    },
+    "CDSL": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1182.8,
+      "pr": 1119.4,
+      "d1": "5.66",
+      "d2": "5.66",
+      "prem": "-0.380",
+      "vol": "46.4"
+    },
+    "CGPOWER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 680.3,
+      "pr": 655.05,
+      "d1": "3.85",
+      "d2": "3.85",
+      "prem": "0.595",
+      "vol": "42.3"
+    },
+    "CHOLAFIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1373.6,
+      "pr": 1354.7,
+      "d1": "1.40",
+      "d2": "1.40",
+      "prem": "0.291",
+      "vol": "38.7"
+    },
+    "CIPLA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1195.9,
+      "pr": 1224.2,
+      "d1": "-2.31",
+      "d2": "-2.31",
+      "prem": "0.619",
+      "vol": "25.4"
+    },
+    "COALINDIA": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 449.4,
+      "pr": 450.45,
+      "d1": "-0.23",
+      "d2": "-0.23",
+      "prem": "-0.267",
+      "vol": "30.6"
+    },
+    "COCHINSHIP": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1338.6,
+      "pr": 1193.25,
+      "d1": "12.18",
+      "d2": "12.18",
+      "prem": "-0.284",
+      "vol": "55.3"
+    },
+    "COFORGE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1153.9,
+      "pr": 1114.7,
+      "d1": "3.52",
+      "d2": "3.52",
+      "prem": "0.416",
+      "vol": "42.8"
+    },
+    "COLPAL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1819.5,
+      "pr": 1788.7,
+      "d1": "1.72",
+      "d2": "1.72",
+      "prem": "0.753",
+      "vol": "29.7"
+    },
+    "CONCOR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 444.55,
+      "pr": 425.3,
+      "d1": "4.53",
+      "d2": "4.53",
+      "prem": "0.484",
+      "vol": "34.9"
+    },
+    "CROMPTON": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 232.6,
+      "pr": 223.6,
+      "d1": "4.03",
+      "d2": "4.03",
+      "prem": "0.232",
+      "vol": "34.0"
+    },
+    "CUMMINSIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4609.1,
+      "pr": 4500.1,
+      "d1": "2.42",
+      "d2": "2.42",
+      "prem": "0.302",
+      "vol": "35.7"
+    },
+    "DABUR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 414.95,
+      "pr": 410.45,
+      "d1": "1.10",
+      "d2": "1.10",
+      "prem": "0.458",
+      "vol": "26.6"
+    },
+    "DALBHARAT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1806,
+      "pr": 1779.15,
+      "d1": "1.51",
+      "d2": "1.51",
+      "prem": "0.399",
+      "vol": "33.5"
+    },
+    "DELHIVERY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 431.4,
+      "pr": 416.7,
+      "d1": "3.53",
+      "d2": "3.53",
+      "prem": "0.614",
+      "vol": "39.7"
+    },
+    "DIVISLAB": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 5906.5,
+      "pr": 5947,
+      "d1": "-0.68",
+      "d2": "-0.68",
+      "prem": "0.508",
+      "vol": "29.9"
+    },
+    "DIXON": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 10253.9,
+      "pr": 9672.65,
+      "d1": "6.01",
+      "d2": "6.01",
+      "prem": "-1.272",
+      "vol": "49.2"
+    },
+    "DLF": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 509.75,
+      "pr": 504.1,
+      "d1": "1.12",
+      "d2": "1.12",
+      "prem": "0.628",
+      "vol": "37.2"
+    },
+    "DMART": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4271.1,
+      "pr": 3956.9,
+      "d1": "7.94",
+      "d2": "7.94",
+      "prem": "0.185",
+      "vol": "32.5"
+    },
+    "DRREDDY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1209.6,
+      "pr": 1254.9,
+      "d1": "-3.61",
+      "d2": "-3.61",
+      "prem": "0.314",
+      "vol": "26.2"
+    },
+    "EICHERMOT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 6825.5,
+      "pr": 6586,
+      "d1": "3.64",
+      "d2": "3.64",
+      "prem": "0.234",
+      "vol": "31.6"
+    },
+    "ETERNAL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 236.55,
+      "pr": 229,
+      "d1": "3.30",
+      "d2": "3.30",
+      "prem": "0.550",
+      "vol": "46.2"
+    },
+    "EXIDEIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 299.85,
+      "pr": 287.9,
+      "d1": "4.15",
+      "d2": "4.15",
+      "prem": "0.334",
+      "vol": "34.8"
+    },
+    "FEDERALBNK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 267.6,
+      "pr": 259.4,
+      "d1": "3.16",
+      "d2": "3.16",
+      "prem": "0.691",
+      "vol": "32.1"
+    },
+    "FINNIFTY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 23981.8,
+      "pr": 23521.8,
+      "d1": "1.96",
+      "d2": "1.96",
+      "prem": "0.767",
+      "vol": "20.4"
+    },
+    "FORCEMOT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 20733.45,
+      "pr": 19404.85,
+      "d1": "6.85",
+      "d2": "6.85",
+      "prem": "0.707",
+      "vol": "64.7"
+    },
+    "FORTIS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 795,
+      "pr": 795,
+      "d1": "0.00",
+      "d2": "0.00",
+      "prem": "0.560",
+      "vol": "35.3"
+    },
+    "GAIL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 140.65,
+      "pr": 137.7,
+      "d1": "2.14",
+      "d2": "2.14",
+      "prem": "0.313",
+      "vol": "35.5"
+    },
+    "GLENMARK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2101.05,
+      "pr": 2131.75,
+      "d1": "-1.44",
+      "d2": "-1.44",
+      "prem": "0.264",
+      "vol": "36.5"
+    },
+    "GMRAIRPORT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 89.29,
+      "pr": 84.75,
+      "d1": "5.36",
+      "d2": "5.36",
+      "prem": "0.515",
+      "vol": "41.1"
+    },
+    "GODFRYPHLP": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1927.4,
+      "pr": 1873.5,
+      "d1": "2.88",
+      "d2": "2.88",
+      "prem": "-0.218",
+      "vol": "72.3"
+    },
+    "GODREJCP": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 997.55,
+      "pr": 984.8,
+      "d1": "1.29",
+      "d2": "1.29",
+      "prem": "0.601",
+      "vol": "29.8"
+    },
+    "GODREJPROP": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1508.1,
+      "pr": 1471.3,
+      "d1": "2.50",
+      "d2": "2.50",
+      "prem": "0.550",
+      "vol": "45.6"
+    },
+    "GRASIM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2592.8,
+      "pr": 2557.7,
+      "d1": "1.37",
+      "d2": "1.37",
+      "prem": "0.274",
+      "vol": "27.9"
+    },
+    "HAL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3670.8,
+      "pr": 3487.2,
+      "d1": "5.26",
+      "d2": "5.26",
+      "prem": "0.618",
+      "vol": "39.1"
+    },
+    "HAVELLS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1185.9,
+      "pr": 1190.6,
+      "d1": "-0.39",
+      "d2": "-0.39",
+      "prem": "0.422",
+      "vol": "29.8"
+    },
+    "HCLTECH": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1354.4,
+      "pr": 1341.6,
+      "d1": "0.95",
+      "d2": "0.95",
+      "prem": "-1.270",
+      "vol": "29.2"
+    },
+    "HDFCAMC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2340.5,
+      "pr": 2216.4,
+      "d1": "5.60",
+      "d2": "5.60",
+      "prem": "0.376",
+      "vol": "37.1"
+    },
+    "HDFCBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 742.25,
+      "pr": 731.55,
+      "d1": "1.46",
+      "d2": "1.46",
+      "prem": "0.714",
+      "vol": "23.8"
+    },
+    "HDFCLIFE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 572.95,
+      "pr": 590.6,
+      "d1": "-2.99",
+      "d2": "-2.99",
+      "prem": "0.611",
+      "vol": "26.9"
+    },
+    "HEROMOTOCO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 5122.05,
+      "pr": 5062.95,
+      "d1": "1.17",
+      "d2": "1.17",
+      "prem": "0.624",
+      "vol": "32.6"
+    },
+    "HINDALCO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 904.6,
+      "pr": 884.45,
+      "d1": "2.28",
+      "d2": "2.28",
+      "prem": "0.315",
+      "vol": "36.4"
+    },
+    "HINDPETRO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 335.55,
+      "pr": 335.4,
+      "d1": "0.04",
+      "d2": "0.04",
+      "prem": "0.522",
+      "vol": "42.5"
+    },
+    "HINDUNILVR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2064.7,
+      "pr": 2055.2,
+      "d1": "0.46",
+      "d2": "0.46",
+      "prem": "0.504",
+      "vol": "23.2"
+    },
+    "HINDZINC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 524.45,
+      "pr": 502.15,
+      "d1": "4.44",
+      "d2": "4.44",
+      "prem": "0.505",
+      "vol": "51.1"
+    },
+    "HUDCO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 168.05,
+      "pr": 159.55,
+      "d1": "5.33",
+      "d2": "5.33",
+      "prem": "0.476",
+      "vol": "50.7"
+    },
+    "HYUNDAI": {
+      "score": 1.03,
+      "label": "Bullish",
+      "cl": 1716.15,
+      "pr": 1778,
+      "d1": "-3.48",
+      "d2": "-3.48",
+      "prem": "0.055",
+      "vol": "33.0"
+    },
+    "ICICIBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1212.7,
+      "pr": 1205.9,
+      "d1": "0.56",
+      "d2": "0.56",
+      "prem": "0.610",
+      "vol": "22.6"
+    },
+    "ICICIGI": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1694.9,
+      "pr": 1710.6,
+      "d1": "-0.92",
+      "d2": "-0.92",
+      "prem": "0.590",
+      "vol": "27.0"
+    },
+    "ICICIPRULI": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 513.35,
+      "pr": 509.55,
+      "d1": "0.75",
+      "d2": "0.75",
+      "prem": "0.321",
+      "vol": "28.5"
+    },
+    "IDEA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 8.64,
+      "pr": 8.53,
+      "d1": "1.29",
+      "d2": "1.29",
+      "prem": "0.810",
+      "vol": "65.5"
+    },
+    "IDFCFIRSTB": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 60.18,
+      "pr": 58.85,
+      "d1": "2.26",
+      "d2": "2.26",
+      "prem": "0.598",
+      "vol": "40.9"
+    },
+    "IEX": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 119.95,
+      "pr": 114.75,
+      "d1": "4.53",
+      "d2": "4.53",
+      "prem": "0.283",
+      "vol": "52.1"
+    },
+    "INDHOTEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 585.2,
+      "pr": 570.95,
+      "d1": "2.50",
+      "d2": "2.50",
+      "prem": "0.547",
+      "vol": "34.7"
+    },
+    "INDIANB": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 888,
+      "pr": 845.7,
+      "d1": "5.00",
+      "d2": "5.00",
+      "prem": "-0.355",
+      "vol": "41.5"
+    },
+    "INDIGO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4180.8,
+      "pr": 3943.5,
+      "d1": "6.02",
+      "d2": "6.02",
+      "prem": "0.605",
+      "vol": "38.5"
+    },
+    "INDUSINDBK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 785.65,
+      "pr": 752.45,
+      "d1": "4.41",
+      "d2": "4.41",
+      "prem": "0.083",
+      "vol": "43.1"
+    },
+    "INDUSTOWER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 423.25,
+      "pr": 418.15,
+      "d1": "1.22",
+      "d2": "1.22",
+      "prem": "0.508",
+      "vol": "37.8"
+    },
+    "INFY": {
+      "score": -1.35,
+      "label": "Bearish",
+      "cl": 1275.7,
+      "pr": 1250.6,
+      "d1": "2.01",
+      "d2": "2.01",
+      "prem": "-0.047",
+      "vol": "30.9"
+    },
+    "INOXWIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 80.53,
+      "pr": 75.49,
+      "d1": "6.68",
+      "d2": "6.68",
+      "prem": "0.410",
+      "vol": "53.8"
+    },
+    "IOC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 135.7,
+      "pr": 135.4,
+      "d1": "0.22",
+      "d2": "0.22",
+      "prem": "0.457",
+      "vol": "33.5"
+    },
+    "IREDA": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 113.75,
+      "pr": 109,
+      "d1": "4.36",
+      "d2": "4.36",
+      "prem": "-0.545",
+      "vol": "48.6"
+    },
+    "IRFC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 91.99,
+      "pr": 87.25,
+      "d1": "5.43",
+      "d2": "5.43",
+      "prem": "0.174",
+      "vol": "45.8"
+    },
+    "ITC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 291.7,
+      "pr": 287.7,
+      "d1": "1.39",
+      "d2": "1.39",
+      "prem": "0.583",
+      "vol": "24.7"
+    },
+    "JINDALSTEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1137.4,
+      "pr": 1113.1,
+      "d1": "2.18",
+      "d2": "2.18",
+      "prem": "0.422",
+      "vol": "38.1"
+    },
+    "JIOFIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 231.95,
+      "pr": 224.1,
+      "d1": "3.50",
+      "d2": "3.50",
+      "prem": "0.332",
+      "vol": "36.8"
+    },
+    "JSWENERGY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 484.15,
+      "pr": 471.6,
+      "d1": "2.66",
+      "d2": "2.66",
+      "prem": "0.382",
+      "vol": "42.9"
+    },
+    "JSWSTEEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1140.4,
+      "pr": 1122.5,
+      "d1": "1.59",
+      "d2": "1.59",
+      "prem": "0.588",
+      "vol": "32.2"
+    },
+    "JUBLFOOD": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 443.7,
+      "pr": 434.1,
+      "d1": "2.21",
+      "d2": "2.21",
+      "prem": "-2.209",
+      "vol": "34.1"
+    },
+    "KALYANKJIL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 387.1,
+      "pr": 375.9,
+      "d1": "2.98",
+      "d2": "2.98",
+      "prem": "0.581",
+      "vol": "51.8"
+    },
+    "KAYNES": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 3539.95,
+      "pr": 3429.4,
+      "d1": "3.22",
+      "d2": "3.22",
+      "prem": "-0.174",
+      "vol": "61.2"
+    },
+    "KEI": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 4134.75,
+      "pr": 4037.6,
+      "d1": "2.41",
+      "d2": "2.41",
+      "prem": "-1.588",
+      "vol": "46.4"
+    },
+    "KFINTECH": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 903,
+      "pr": 876.5,
+      "d1": "3.02",
+      "d2": "3.02",
+      "prem": "-2.010",
+      "vol": "50.6"
+    },
+    "KOTAKBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 356.05,
+      "pr": 353.4,
+      "d1": "0.75",
+      "d2": "0.75",
+      "prem": "0.562",
+      "vol": "26.7"
+    },
+    "KPITTECH": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 674.3,
+      "pr": 634.75,
+      "d1": "6.23",
+      "d2": "6.23",
+      "prem": "0.096",
+      "vol": "45.6"
+    },
+    "LAURUSLABS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1038.8,
+      "pr": 992.65,
+      "d1": "4.65",
+      "d2": "4.65",
+      "prem": "0.337",
+      "vol": "40.0"
+    },
+    "LICHSGFIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 515.55,
+      "pr": 495.25,
+      "d1": "4.10",
+      "d2": "4.10",
+      "prem": "0.310",
+      "vol": "33.5"
+    },
+    "LICI": {
+      "score": -0.61,
+      "label": "Mild Bearish",
+      "cl": 746,
+      "pr": 725.65,
+      "d1": "2.80",
+      "d2": "2.80",
+      "prem": "-0.040",
+      "vol": "32.2"
+    },
+    "LODHA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 685.35,
+      "pr": 677,
+      "d1": "1.23",
+      "d2": "1.23",
+      "prem": "0.379",
+      "vol": "46.6"
+    },
+    "LT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3607.5,
+      "pr": 3504.1,
+      "d1": "2.95",
+      "d2": "2.95",
+      "prem": "0.590",
+      "vol": "32.5"
+    },
+    "LTF": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 244.65,
+      "pr": 240.2,
+      "d1": "1.85",
+      "d2": "1.85",
+      "prem": "0.311",
+      "vol": "40.1"
+    },
+    "LTM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4107.05,
+      "pr": 4013.8,
+      "d1": "2.32",
+      "d2": "2.32",
+      "prem": "0.169",
+      "vol": "35.3"
+    },
+    "LUPIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2274.9,
+      "pr": 2313.9,
+      "d1": "-1.69",
+      "d2": "-1.69",
+      "prem": "0.207",
+      "vol": "28.4"
+    },
+    "M&M": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3031.5,
+      "pr": 2954.7,
+      "d1": "2.60",
+      "d2": "2.60",
+      "prem": "0.290",
+      "vol": "35.0"
+    },
+    "MANAPPURAM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 255.4,
+      "pr": 251.1,
+      "d1": "1.71",
+      "d2": "1.71",
+      "prem": "0.215",
+      "vol": "42.8"
+    },
+    "MANKIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2001.3,
+      "pr": 2005.8,
+      "d1": "-0.22",
+      "d2": "-0.22",
+      "prem": "0.145",
+      "vol": "34.4"
+    },
+    "MARICO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 744.5,
+      "pr": 735.95,
+      "d1": "1.16",
+      "d2": "1.16",
+      "prem": "0.463",
+      "vol": "24.7"
+    },
+    "MARUTI": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 12509,
+      "pr": 12305.95,
+      "d1": "1.65",
+      "d2": "1.65",
+      "prem": "0.432",
+      "vol": "27.6"
+    },
+    "MAXHEALTH": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 958.9,
+      "pr": 962.3,
+      "d1": "-0.35",
+      "d2": "-0.35",
+      "prem": "0.490",
+      "vol": "36.6"
+    },
+    "MAZDOCK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2318.15,
+      "pr": 2065.1,
+      "d1": "12.25",
+      "d2": "12.25",
+      "prem": "0.636",
+      "vol": "57.0"
+    },
+    "MCX": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2469.65,
+      "pr": 2389.5,
+      "d1": "3.35",
+      "d2": "3.35",
+      "prem": "0.508",
+      "vol": "50.4"
+    },
+    "MFSL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1477.4,
+      "pr": 1490.75,
+      "d1": "-0.90",
+      "d2": "-0.90",
+      "prem": "0.602",
+      "vol": "30.8"
+    },
+    "MIDCPNIFTY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 12460.05,
+      "pr": 12158.75,
+      "d1": "2.48",
+      "d2": "2.48",
+      "prem": "0.164",
+      "vol": "24.5"
+    },
+    "MOTHERSON": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 107.6,
+      "pr": 105.1,
+      "d1": "2.38",
+      "d2": "2.38",
+      "prem": "0.595",
+      "vol": "41.8"
+    },
+    "MOTILALOFS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 680,
+      "pr": 632.75,
+      "d1": "7.47",
+      "d2": "7.47",
+      "prem": "0.544",
+      "vol": "54.1"
+    },
+    "MPHASIS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2136.6,
+      "pr": 2053,
+      "d1": "4.07",
+      "d2": "4.07",
+      "prem": "0.192",
+      "vol": "35.9"
+    },
+    "MUTHOOTFIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3256,
+      "pr": 3160.1,
+      "d1": "3.03",
+      "d2": "3.03",
+      "prem": "0.178",
+      "vol": "43.8"
+    },
+    "NAM-INDIA": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 865.15,
+      "pr": 801.8,
+      "d1": "7.90",
+      "d2": "7.90",
+      "prem": "-0.428",
+      "vol": "47.9"
+    },
+    "NATIONALUM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 399.45,
+      "pr": 386.1,
+      "d1": "3.46",
+      "d2": "3.46",
+      "prem": "0.651",
+      "vol": "52.5"
+    },
+    "NAUKRI": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 985.25,
+      "pr": 967.85,
+      "d1": "1.80",
+      "d2": "1.80",
+      "prem": "-0.513",
+      "vol": "36.7"
+    },
+    "NBCC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 82.79,
+      "pr": 77.52,
+      "d1": "6.80",
+      "d2": "6.80",
+      "prem": "0.471",
+      "vol": "52.3"
+    },
+    "NESTLEIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1180.8,
+      "pr": 1174.8,
+      "d1": "0.51",
+      "d2": "0.51",
+      "prem": "0.296",
+      "vol": "23.2"
+    },
+    "NHPC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 75.39,
+      "pr": 73.72,
+      "d1": "2.27",
+      "d2": "2.27",
+      "prem": "0.345",
+      "vol": "35.2"
+    },
+    "NIFTY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 22679.4,
+      "pr": 22331.4,
+      "d1": "1.56",
+      "d2": "1.56",
+      "prem": "0.532",
+      "vol": "17.0"
+    },
+    "NIFTYNXT50": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 61912.75,
+      "pr": 60349.8,
+      "d1": "2.59",
+      "d2": "2.59",
+      "prem": "0.505",
+      "vol": "22.4"
+    },
+    "NMDC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 78.17,
+      "pr": 76.27,
+      "d1": "2.49",
+      "d2": "2.49",
+      "prem": "0.614",
+      "vol": "39.3"
+    },
+    "NTPC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 364.65,
+      "pr": 370.65,
+      "d1": "-1.62",
+      "d2": "-1.62",
+      "prem": "0.631",
+      "vol": "27.6"
+    },
+    "NUVAMA": {
+      "score": -4.32,
+      "label": "Strong Bearish",
+      "cl": 1138.9,
+      "pr": 1160.9,
+      "d1": "-1.90",
+      "d2": "-1.90",
+      "prem": "-0.061",
+      "vol": "50.2"
+    },
+    "NYKAA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 239.95,
+      "pr": 235,
+      "d1": "2.11",
+      "d2": "2.11",
+      "prem": "0.604",
+      "vol": "36.0"
+    },
+    "OBEROIRLTY": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1474.5,
+      "pr": 1419,
+      "d1": "3.91",
+      "d2": "3.91",
+      "prem": "-1.702",
+      "vol": "36.8"
+    },
+    "OFSS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 6883,
+      "pr": 6730.95,
+      "d1": "2.26",
+      "d2": "2.26",
+      "prem": "0.102",
+      "vol": "39.8"
+    },
+    "OIL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 473.4,
+      "pr": 475.45,
+      "d1": "-0.43",
+      "d2": "-0.43",
+      "prem": "0.243",
+      "vol": "41.5"
+    },
+    "ONGC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 288.05,
+      "pr": 284.65,
+      "d1": "1.19",
+      "d2": "1.19",
+      "prem": "0.191",
+      "vol": "32.2"
+    },
+    "PAGEIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 32620.25,
+      "pr": 31775.6,
+      "d1": "2.66",
+      "d2": "2.66",
+      "prem": "0.582",
+      "vol": "28.5"
+    },
+    "PATANJALI": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 470.1,
+      "pr": 459.7,
+      "d1": "2.26",
+      "d2": "2.26",
+      "prem": "0.245",
+      "vol": "32.7"
+    },
+    "PAYTM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 997.1,
+      "pr": 959,
+      "d1": "3.97",
+      "d2": "3.97",
+      "prem": "0.532",
+      "vol": "52.6"
+    },
+    "PERSISTENT": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 5049.05,
+      "pr": 4877.15,
+      "d1": "3.52",
+      "d2": "3.52",
+      "prem": "-2.007",
+      "vol": "40.4"
+    },
+    "PETRONET": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 257.9,
+      "pr": 248.45,
+      "d1": "3.80",
+      "d2": "3.80",
+      "prem": "-0.830",
+      "vol": "39.0"
+    },
+    "PFC": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 397.7,
+      "pr": 379.5,
+      "d1": "4.80",
+      "d2": "4.80",
+      "prem": "0.163",
+      "vol": "42.6"
+    },
+    "PGEL": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 480.9,
+      "pr": 469.9,
+      "d1": "2.34",
+      "d2": "2.34",
+      "prem": "-2.818",
+      "vol": "66.4"
+    },
+    "PHOENIXLTD": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1517.6,
+      "pr": 1506.3,
+      "d1": "0.75",
+      "d2": "0.75",
+      "prem": "0.586",
+      "vol": "39.3"
+    },
+    "PIDILITIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1306.85,
+      "pr": 1285,
+      "d1": "1.70",
+      "d2": "1.70",
+      "prem": "0.585",
+      "vol": "24.8"
+    },
+    "PIIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2844.9,
+      "pr": 2718.8,
+      "d1": "4.64",
+      "d2": "4.64",
+      "prem": "0.471",
+      "vol": "31.4"
+    },
+    "PNB": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 104,
+      "pr": 100.55,
+      "d1": "3.43",
+      "d2": "3.43",
+      "prem": "0.615",
+      "vol": "37.6"
+    },
+    "PNBHOUSING": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 780.05,
+      "pr": 755.1,
+      "d1": "3.30",
+      "d2": "3.30",
+      "prem": "0.673",
+      "vol": "46.5"
+    },
+    "POLICYBZR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1433.1,
+      "pr": 1427.8,
+      "d1": "0.37",
+      "d2": "0.37",
+      "prem": "0.593",
+      "vol": "45.7"
+    },
+    "POLYCAB": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 6925.1,
+      "pr": 6843.45,
+      "d1": "1.19",
+      "d2": "1.19",
+      "prem": "0.157",
+      "vol": "41.2"
+    },
+    "POWERGRID": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 292.8,
+      "pr": 296.1,
+      "d1": "-1.11",
+      "d2": "-1.11",
+      "prem": "0.444",
+      "vol": "28.9"
+    },
+    "POWERINDIA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 25064.75,
+      "pr": 24234.5,
+      "d1": "3.43",
+      "d2": "3.43",
+      "prem": "0.220",
+      "vol": "57.9"
+    },
+    "PPLPHARMA": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 142.5,
+      "pr": 136.55,
+      "d1": "4.36",
+      "d2": "4.36",
+      "prem": "-1.572",
+      "vol": "44.0"
+    },
+    "PREMIERENE": {
+      "score": -3.58,
+      "label": "Strong Bearish",
+      "cl": 937.7,
+      "pr": 891.6,
+      "d1": "5.17",
+      "d2": "5.17",
+      "prem": "-0.117",
+      "vol": "49.8"
+    },
+    "PRESTIGE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1144.9,
+      "pr": 1126.5,
+      "d1": "1.63",
+      "d2": "1.63",
+      "prem": "0.629",
+      "vol": "44.3"
+    },
+    "RBLBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 301.65,
+      "pr": 289.75,
+      "d1": "4.11",
+      "d2": "4.11",
+      "prem": "0.265",
+      "vol": "43.1"
+    },
+    "RECLTD": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 322.1,
+      "pr": 305.1,
+      "d1": "5.57",
+      "d2": "5.57",
+      "prem": "0.388",
+      "vol": "43.1"
+    },
+    "RELIANCE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1369.2,
+      "pr": 1343.9,
+      "d1": "1.88",
+      "d2": "1.88",
+      "prem": "0.321",
+      "vol": "25.6"
+    },
+    "RVNL": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 262.6,
+      "pr": 249.65,
+      "d1": "5.19",
+      "d2": "5.19",
+      "prem": "-2.639",
+      "vol": "58.6"
+    },
+    "SAIL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 155.85,
+      "pr": 151.4,
+      "d1": "2.94",
+      "d2": "2.94",
+      "prem": "0.597",
+      "vol": "45.3"
+    },
+    "SAMMAANCAP": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 146.65,
+      "pr": 149.5,
+      "d1": "-1.91",
+      "d2": "-1.91",
+      "prem": "0.614",
+      "vol": "54.2"
+    },
+    "SBICARD": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 637.15,
+      "pr": 635.45,
+      "d1": "0.27",
+      "d2": "0.27",
+      "prem": "-1.248",
+      "vol": "32.1"
+    },
+    "SBILIFE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1790.5,
+      "pr": 1777.3,
+      "d1": "0.74",
+      "d2": "0.74",
+      "prem": "0.363",
+      "vol": "25.3"
+    },
+    "SBIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1017.8,
+      "pr": 979.4,
+      "d1": "3.92",
+      "d2": "3.92",
+      "prem": "0.270",
+      "vol": "29.2"
+    },
+    "SENSEX": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 73134.32,
+      "pr": 71947.55,
+      "d1": "1.65",
+      "d2": "1.65",
+      "prem": "0.791",
+      "vol": "16.8"
+    },
+    "SENSEX50": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 23705.19,
+      "pr": 23333.14,
+      "d1": "1.59",
+      "d2": "1.59",
+      "prem": "0.438",
+      "vol": "16.9"
+    },
+    "SHREECEM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 23265.05,
+      "pr": 23020,
+      "d1": "1.06",
+      "d2": "1.06",
+      "prem": "0.150",
+      "vol": "27.2"
+    },
+    "SHRIRAMFIN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 900.55,
+      "pr": 872.1,
+      "d1": "3.26",
+      "d2": "3.26",
+      "prem": "0.411",
+      "vol": "43.5"
+    },
+    "SIEMENS": {
+      "score": 4.45,
+      "label": "Strong Bullish",
+      "cl": 3017,
+      "pr": 2934.95,
+      "d1": "2.80",
+      "d2": "2.80",
+      "prem": "0.063",
+      "vol": "39.9"
+    },
+    "SOLARINDS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 12807.15,
+      "pr": 12075.2,
+      "d1": "6.06",
+      "d2": "6.06",
+      "prem": "0.467",
+      "vol": "41.9"
+    },
+    "SONACOMS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 497.25,
+      "pr": 481.5,
+      "d1": "3.27",
+      "d2": "3.27",
+      "prem": "0.322",
+      "vol": "40.6"
+    },
+    "SRF": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2555.2,
+      "pr": 2438,
+      "d1": "4.81",
+      "d2": "4.81",
+      "prem": "0.059",
+      "vol": "36.2"
+    },
+    "SUNPHARMA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1728.5,
+      "pr": 1757.2,
+      "d1": "-1.63",
+      "d2": "-1.63",
+      "prem": "0.428",
+      "vol": "23.2"
+    },
+    "SUPREMEIND": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3658.3,
+      "pr": 3745.15,
+      "d1": "-2.32",
+      "d2": "-2.32",
+      "prem": "0.292",
+      "vol": "38.6"
+    },
+    "SUZLON": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 41.12,
+      "pr": 39.56,
+      "d1": "3.94",
+      "d2": "3.94",
+      "prem": "0.438",
+      "vol": "46.2"
+    },
+    "SWIGGY": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 265.3,
+      "pr": 260.05,
+      "d1": "2.02",
+      "d2": "2.02",
+      "prem": "0.433",
+      "vol": "45.3"
+    },
+    "SX40": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 42364.75,
+      "pr": 41665.02,
+      "d1": "1.68",
+      "d2": "1.68",
+      "prem": "0.408",
+      "vol": "17.6"
+    },
+    "TATACONSUM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1023.8,
+      "pr": 1014.8,
+      "d1": "0.89",
+      "d2": "0.89",
+      "prem": "0.332",
+      "vol": "27.7"
+    },
+    "TATAELXSI": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4127.1,
+      "pr": 3976.6,
+      "d1": "3.78",
+      "d2": "3.78",
+      "prem": "0.189",
+      "vol": "39.2"
+    },
+    "TATAPOWER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 380.2,
+      "pr": 378.75,
+      "d1": "0.38",
+      "d2": "0.38",
+      "prem": "0.473",
+      "vol": "31.7"
+    },
+    "TATASTEEL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 194.6,
+      "pr": 191.85,
+      "d1": "1.43",
+      "d2": "1.43",
+      "prem": "0.555",
+      "vol": "36.7"
+    },
+    "TATATECH": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 531.05,
+      "pr": 509.25,
+      "d1": "4.28",
+      "d2": "4.28",
+      "prem": "0.235",
+      "vol": "33.9"
+    },
+    "TCS": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2408.2,
+      "pr": 2358.9,
+      "d1": "2.09",
+      "d2": "2.09",
+      "prem": "0.461",
+      "vol": "26.8"
+    },
+    "TECHM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1404.5,
+      "pr": 1384.05,
+      "d1": "1.48",
+      "d2": "1.48",
+      "prem": "0.157",
+      "vol": "31.3"
+    },
+    "TIINDIA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 2572.65,
+      "pr": 2517.3,
+      "d1": "2.20",
+      "d2": "2.20",
+      "prem": "0.344",
+      "vol": "44.5"
+    },
+    "TITAN": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4065.45,
+      "pr": 3951.4,
+      "d1": "2.89",
+      "d2": "2.89",
+      "prem": "0.451",
+      "vol": "26.6"
+    },
+    "TMPV": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 302.95,
+      "pr": 296.2,
+      "d1": "2.28",
+      "d2": "2.28",
+      "prem": "0.330",
+      "vol": "36.9"
+    },
+    "TORNTPHARM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 4111.25,
+      "pr": 4220.2,
+      "d1": "-2.58",
+      "d2": "-2.58",
+      "prem": "0.500",
+      "vol": "25.5"
+    },
+    "TORNTPOWER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1337.1,
+      "pr": 1305.8,
+      "d1": "2.40",
+      "d2": "2.40",
+      "prem": "0.613",
+      "vol": "41.9"
+    },
+    "TRENT": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3526.45,
+      "pr": 3295.75,
+      "d1": "7.00",
+      "d2": "7.00",
+      "prem": "0.305",
+      "vol": "43.5"
+    },
+    "TVSMOTOR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3425.75,
+      "pr": 3363.8,
+      "d1": "1.84",
+      "d2": "1.84",
+      "prem": "0.585",
+      "vol": "32.5"
+    },
+    "ULTRACEMCO": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 10714,
+      "pr": 10745,
+      "d1": "-0.29",
+      "d2": "-0.29",
+      "prem": "0.616",
+      "vol": "29.2"
+    },
+    "UNIONBANK": {
+      "score": -3.44,
+      "label": "Strong Bearish",
+      "cl": 171.65,
+      "pr": 164.2,
+      "d1": "4.54",
+      "d2": "4.54",
+      "prem": "-0.111",
+      "vol": "43.6"
+    },
+    "UNITDSPR": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1249.3,
+      "pr": 1218.8,
+      "d1": "2.50",
+      "d2": "2.50",
+      "prem": "0.104",
+      "vol": "29.7"
+    },
+    "UNOMINDA": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 1043.5,
+      "pr": 1031.6,
+      "d1": "1.15",
+      "d2": "1.15",
+      "prem": "0.364",
+      "vol": "42.3"
+    },
+    "UPL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 594.5,
+      "pr": 567.95,
+      "d1": "4.67",
+      "d2": "4.67",
+      "prem": "0.429",
+      "vol": "42.1"
+    },
+    "VBL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 401.8,
+      "pr": 384.1,
+      "d1": "4.61",
+      "d2": "4.61",
+      "prem": "0.460",
+      "vol": "37.8"
+    },
+    "VEDL": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 677.2,
+      "pr": 654.8,
+      "d1": "3.42",
+      "d2": "3.42",
+      "prem": "0.554",
+      "vol": "41.2"
+    },
+    "VMM": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 105.1,
+      "pr": 105.3,
+      "d1": "-0.19",
+      "d2": "-0.19",
+      "prem": "0.561",
+      "vol": "37.3"
+    },
+    "VOLTAS": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 1249.7,
+      "pr": 1272.8,
+      "d1": "-1.81",
+      "d2": "-1.81",
+      "prem": "-2.225",
+      "vol": "39.7"
+    },
+    "WAAREEENER": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 3089.2,
+      "pr": 3109.75,
+      "d1": "-0.66",
+      "d2": "-0.66",
+      "prem": "0.583",
+      "vol": "53.8"
+    },
+    "WIPRO": {
+      "score": -5,
+      "label": "Strong Bearish",
+      "cl": 191.2,
+      "pr": 187.65,
+      "d1": "1.89",
+      "d2": "1.89",
+      "prem": "-0.246",
+      "vol": "31.3"
+    },
+    "YESBANK": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 17.91,
+      "pr": 17.25,
+      "d1": "3.83",
+      "d2": "3.83",
+      "prem": "0.558",
+      "vol": "38.5"
+    },
+    "ZYDUSLIFE": {
+      "score": 5,
+      "label": "Strong Bullish",
+      "cl": 863.2,
+      "pr": 871.2,
+      "d1": "-0.92",
+      "d2": "-0.92",
+      "prem": "0.377",
+      "vol": "28.5"
+    }
+  },
+  "meta": {
+    "date": "2026-04-01",
+    "updatedAt": "2026-04-02T00:24:28.603Z",
+    "files": [
+      "01-Apr-2026"
+    ],
+    "stockCount": 222,
+    "latestDate": "01-Apr-2026"
+  }
+}
