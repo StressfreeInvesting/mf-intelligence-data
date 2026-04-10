@@ -1,0 +1,2233 @@
+{
+  "week": "2026-W15",
+  "generatedAt": "2026-04-10T14:44:19.047Z",
+  "daysIncluded": [
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10"
+  ],
+  "stockCount": 222,
+  "signals": {
+    "360ONE": {
+      "avgScore": -1.05,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.96,
+      "latestScore": -1.75,
+      "latestLabel": "Bearish",
+      "cl": 1012.65
+    },
+    "ABB": {
+      "avgScore": 0.09,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 10.75,
+      "latestScore": 0.79,
+      "latestLabel": "Mild Bullish",
+      "cl": 6859.5
+    },
+    "ABCAPITAL": {
+      "avgScore": -0.65,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.83,
+      "latestScore": 0.61,
+      "latestLabel": "Mild Bullish",
+      "cl": 341.9
+    },
+    "ADANIENSOL": {
+      "avgScore": -0.15,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 16.8,
+      "latestScore": 0.86,
+      "latestLabel": "Mild Bullish",
+      "cl": 1157.9
+    },
+    "ADANIENT": {
+      "avgScore": -0.4,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.71,
+      "latestScore": 0.46,
+      "latestLabel": "Mild Bullish",
+      "cl": 2086.9
+    },
+    "ADANIGREEN": {
+      "avgScore": 0.31,
+      "trend": "Mild Bullish",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 17.83,
+      "latestScore": 0.77,
+      "latestLabel": "Mild Bullish",
+      "cl": 1085.35
+    },
+    "ADANIPORTS": {
+      "avgScore": -0.97,
+      "trend": "Mild Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.36,
+      "latestScore": 0.24,
+      "latestLabel": "Neutral",
+      "cl": 1475.3
+    },
+    "ADANIPOWER": {
+      "avgScore": -0.43,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.69,
+      "latestScore": 0.3,
+      "latestLabel": "Mild Bullish",
+      "cl": 175.81
+    },
+    "ALKEM": {
+      "avgScore": -1.11,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.89,
+      "latestScore": -1.59,
+      "latestLabel": "Bearish",
+      "cl": 5440
+    },
+    "AMBER": {
+      "avgScore": -0.97,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 13.11,
+      "latestScore": 0.64,
+      "latestLabel": "Mild Bullish",
+      "cl": 7245
+    },
+    "AMBUJACEM": {
+      "avgScore": -1.39,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.51,
+      "latestScore": 1.38,
+      "latestLabel": "Bullish",
+      "cl": 445.15
+    },
+    "ANGELONE": {
+      "avgScore": -1.6,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 14.2,
+      "latestScore": -4.48,
+      "latestLabel": "Strong Bearish",
+      "cl": 280.98
+    },
+    "APLAPOLLO": {
+      "avgScore": -0.92,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.81,
+      "latestScore": -1.49,
+      "latestLabel": "Bearish",
+      "cl": 2064.6
+    },
+    "APOLLOHOSP": {
+      "avgScore": -1.68,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 1.89,
+      "latestScore": -2.57,
+      "latestLabel": "Strong Bearish",
+      "cl": 7511.5
+    },
+    "ASHOKLEY": {
+      "avgScore": -0.25,
+      "trend": "Neutral",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 17.96,
+      "latestScore": 0.77,
+      "latestLabel": "Mild Bullish",
+      "cl": 178.02
+    },
+    "ASIANPAINT": {
+      "avgScore": -0.07,
+      "trend": "Neutral",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.08,
+      "latestScore": 2.01,
+      "latestLabel": "Strong Bullish",
+      "cl": 2360.7
+    },
+    "ASTRAL": {
+      "avgScore": -0.37,
+      "trend": "Mild Bearish",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 7.04,
+      "latestScore": 0.86,
+      "latestLabel": "Mild Bullish",
+      "cl": 1630
+    },
+    "AUBANK": {
+      "avgScore": -0.52,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 11.12,
+      "latestScore": -0.41,
+      "latestLabel": "Mild Bearish",
+      "cl": 981.8
+    },
+    "AUROPHARMA": {
+      "avgScore": -1.73,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 0.67,
+      "latestScore": -1.94,
+      "latestLabel": "Bearish",
+      "cl": 1349.4
+    },
+    "AXISBANK": {
+      "avgScore": -0.41,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.47,
+      "latestScore": 0.64,
+      "latestLabel": "Mild Bullish",
+      "cl": 1350.8
+    },
+    "BAJAJ-AUTO": {
+      "avgScore": 0.12,
+      "trend": "Neutral",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 9.74,
+      "latestScore": 1.16,
+      "latestLabel": "Bullish",
+      "cl": 9813.5
+    },
+    "BAJAJFINSV": {
+      "avgScore": 0.04,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.19,
+      "latestScore": 1.03,
+      "latestLabel": "Bullish",
+      "cl": 1809.2
+    },
+    "BAJAJHLDNG": {
+      "avgScore": -0.23,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.49,
+      "latestScore": -1.6,
+      "latestLabel": "Bearish",
+      "cl": 9997.5
+    },
+    "BAJFINANCE": {
+      "avgScore": -0.77,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.66,
+      "latestScore": 0.16,
+      "latestLabel": "Neutral",
+      "cl": 924.55
+    },
+    "BANDHANBNK": {
+      "avgScore": -0.81,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 10.15,
+      "latestScore": -1.39,
+      "latestLabel": "Bearish",
+      "cl": 168.07
+    },
+    "BANKBARODA": {
+      "avgScore": -1.52,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.32,
+      "latestScore": -2.11,
+      "latestLabel": "Strong Bearish",
+      "cl": 276.17
+    },
+    "BANKEX": {
+      "avgScore": -0.35,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 6.42,
+      "latestScore": 0.87,
+      "latestLabel": "Mild Bullish",
+      "cl": 62984.89
+    },
+    "BANKINDIA": {
+      "avgScore": -1.38,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.41,
+      "latestScore": 0.66,
+      "latestLabel": "Mild Bullish",
+      "cl": 147.93
+    },
+    "BANKNIFTY": {
+      "avgScore": -0.38,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 6.28,
+      "latestScore": 0.66,
+      "latestLabel": "Mild Bullish",
+      "cl": 55912.75
+    },
+    "BDL": {
+      "avgScore": -0.85,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 9.9,
+      "latestScore": -1.67,
+      "latestLabel": "Bearish",
+      "cl": 1345.8
+    },
+    "BEL": {
+      "avgScore": -1.2,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.58,
+      "latestScore": -2.06,
+      "latestLabel": "Strong Bearish",
+      "cl": 442.45
+    },
+    "BHARATFORG": {
+      "avgScore": -0.61,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.67,
+      "latestScore": 1.29,
+      "latestLabel": "Bullish",
+      "cl": 1798.8
+    },
+    "BHARTIARTL": {
+      "avgScore": -0.82,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.31,
+      "latestScore": -2.03,
+      "latestLabel": "Strong Bearish",
+      "cl": 1870
+    },
+    "BHEL": {
+      "avgScore": 0.66,
+      "trend": "Mild Bullish",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 15.91,
+      "latestScore": 0.32,
+      "latestLabel": "Mild Bullish",
+      "cl": 284.71
+    },
+    "BIOCON": {
+      "avgScore": -2.31,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": -1.8,
+      "latestScore": -2.18,
+      "latestLabel": "Strong Bearish",
+      "cl": 348.6
+    },
+    "BLUESTARCO": {
+      "avgScore": -1.36,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.96,
+      "latestScore": -0.63,
+      "latestLabel": "Mild Bearish",
+      "cl": 1690
+    },
+    "BOSCHLTD": {
+      "avgScore": 0.3,
+      "trend": "Mild Bullish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 11.57,
+      "latestScore": -0.36,
+      "latestLabel": "Mild Bearish",
+      "cl": 37330
+    },
+    "BPCL": {
+      "avgScore": -1.3,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.41,
+      "latestScore": -2.71,
+      "latestLabel": "Strong Bearish",
+      "cl": 299.35
+    },
+    "BRITANNIA": {
+      "avgScore": -1.8,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 0.41,
+      "latestScore": -0.56,
+      "latestLabel": "Mild Bearish",
+      "cl": 5557.5
+    },
+    "BSE": {
+      "avgScore": -1.02,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 10.02,
+      "latestScore": -2.81,
+      "latestLabel": "Strong Bearish",
+      "cl": 3281.2
+    },
+    "CAMS": {
+      "avgScore": -1.11,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 7.14,
+      "latestScore": 0.01,
+      "latestLabel": "Neutral",
+      "cl": 715.8
+    },
+    "CANBK": {
+      "avgScore": -0.97,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.39,
+      "latestScore": -0.12,
+      "latestLabel": "Neutral",
+      "cl": 140.15
+    },
+    "CDSL": {
+      "avgScore": -1.76,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 8.14,
+      "latestScore": -1.02,
+      "latestLabel": "Bearish",
+      "cl": 1303.4
+    },
+    "CGPOWER": {
+      "avgScore": -1,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.37,
+      "latestScore": -0.83,
+      "latestLabel": "Mild Bearish",
+      "cl": 731.1
+    },
+    "CHOLAFIN": {
+      "avgScore": -0.15,
+      "trend": "Neutral",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 13.49,
+      "latestScore": 0.91,
+      "latestLabel": "Mild Bullish",
+      "cl": 1581.2
+    },
+    "CIPLA": {
+      "avgScore": -1.13,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.38,
+      "latestScore": -2.04,
+      "latestLabel": "Strong Bearish",
+      "cl": 1229.5
+    },
+    "COALINDIA": {
+      "avgScore": -2.21,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": -5.54,
+      "latestScore": -4.16,
+      "latestLabel": "Strong Bearish",
+      "cl": 434.1
+    },
+    "COCHINSHIP": {
+      "avgScore": -0.46,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.79,
+      "latestScore": 0.52,
+      "latestLabel": "Mild Bullish",
+      "cl": 1464.6
+    },
+    "COFORGE": {
+      "avgScore": -1.75,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 0.34,
+      "latestScore": -3.64,
+      "latestLabel": "Strong Bearish",
+      "cl": 1224.3
+    },
+    "COLPAL": {
+      "avgScore": -0.41,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.98,
+      "latestScore": -0.52,
+      "latestLabel": "Mild Bearish",
+      "cl": 1939.1
+    },
+    "CONCOR": {
+      "avgScore": -0.76,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.39,
+      "latestScore": -3.24,
+      "latestLabel": "Strong Bearish",
+      "cl": 483.75
+    },
+    "CROMPTON": {
+      "avgScore": -1.48,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.77,
+      "latestScore": -0.03,
+      "latestLabel": "Neutral",
+      "cl": 241.72
+    },
+    "CUMMINSIND": {
+      "avgScore": -0.3,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.37,
+      "latestScore": 1.24,
+      "latestLabel": "Bullish",
+      "cl": 5138.7
+    },
+    "DABUR": {
+      "avgScore": -0.22,
+      "trend": "Neutral",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.32,
+      "latestScore": 0.1,
+      "latestLabel": "Neutral",
+      "cl": 435.7
+    },
+    "DALBHARAT": {
+      "avgScore": -1.2,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.97,
+      "latestScore": 0.88,
+      "latestLabel": "Mild Bullish",
+      "cl": 1968.7
+    },
+    "DELHIVERY": {
+      "avgScore": -0.26,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.86,
+      "latestScore": -2.56,
+      "latestLabel": "Strong Bearish",
+      "cl": 470.15
+    },
+    "DIVISLAB": {
+      "avgScore": -0.21,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 5.18,
+      "latestScore": 0.85,
+      "latestLabel": "Mild Bullish",
+      "cl": 6116.5
+    },
+    "DIXON": {
+      "avgScore": -1.43,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.67,
+      "latestScore": -3.27,
+      "latestLabel": "Strong Bearish",
+      "cl": 10675.5
+    },
+    "DLF": {
+      "avgScore": -0.71,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.63,
+      "latestScore": -1.58,
+      "latestLabel": "Bearish",
+      "cl": 569.6
+    },
+    "DMART": {
+      "avgScore": -2.33,
+      "trend": "Strong Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": -3.31,
+      "latestScore": -3.02,
+      "latestLabel": "Strong Bearish",
+      "cl": 4400.6
+    },
+    "DRREDDY": {
+      "avgScore": -1.46,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 1.18,
+      "latestScore": -0.5,
+      "latestLabel": "Mild Bearish",
+      "cl": 1232.2
+    },
+    "EICHERMOT": {
+      "avgScore": 0.47,
+      "trend": "Mild Bullish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 12.55,
+      "latestScore": 1.21,
+      "latestLabel": "Bullish",
+      "cl": 7423.5
+    },
+    "ETERNAL": {
+      "avgScore": -1.84,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.46,
+      "latestScore": -1.76,
+      "latestLabel": "Bearish",
+      "cl": 240.23
+    },
+    "EXIDEIND": {
+      "avgScore": -0.49,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.6,
+      "latestScore": 2.32,
+      "latestLabel": "Strong Bullish",
+      "cl": 324.5
+    },
+    "FEDERALBNK": {
+      "avgScore": -0.09,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.44,
+      "latestScore": 1.36,
+      "latestLabel": "Bullish",
+      "cl": 291.7
+    },
+    "FINNIFTY": {
+      "avgScore": -0.23,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 6.55,
+      "latestScore": 0.74,
+      "latestLabel": "Mild Bullish",
+      "cl": 26213.9
+    },
+    "FORCEMOT": {
+      "avgScore": -1.28,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.77,
+      "latestScore": -0.19,
+      "latestLabel": "Neutral",
+      "cl": 22617
+    },
+    "FORTIS": {
+      "avgScore": -0.74,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 4.91,
+      "latestScore": -2.63,
+      "latestLabel": "Strong Bearish",
+      "cl": 847.85
+    },
+    "GAIL": {
+      "avgScore": -0.8,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.64,
+      "latestScore": -1.62,
+      "latestLabel": "Bearish",
+      "cl": 154.08
+    },
+    "GLENMARK": {
+      "avgScore": -1.8,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.77,
+      "latestScore": -2.88,
+      "latestLabel": "Strong Bearish",
+      "cl": 2163.2
+    },
+    "GMRAIRPORT": {
+      "avgScore": -1.83,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 4.44,
+      "latestScore": -2.48,
+      "latestLabel": "Strong Bearish",
+      "cl": 95.25
+    },
+    "GODFRYPHLP": {
+      "avgScore": -0.39,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 9.08,
+      "latestScore": 1.36,
+      "latestLabel": "Bullish",
+      "cl": 2101.6
+    },
+    "GODREJCP": {
+      "avgScore": -0.42,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.6,
+      "latestScore": -1.34,
+      "latestLabel": "Bearish",
+      "cl": 1078.1
+    },
+    "GODREJPROP": {
+      "avgScore": -0.33,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.32,
+      "latestScore": -1.07,
+      "latestLabel": "Bearish",
+      "cl": 1716.5
+    },
+    "GRASIM": {
+      "avgScore": -1.03,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 4.9,
+      "latestScore": -2.05,
+      "latestLabel": "Strong Bearish",
+      "cl": 2742.6
+    },
+    "HAL": {
+      "avgScore": 0.08,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.6,
+      "latestScore": -0.49,
+      "latestLabel": "Mild Bearish",
+      "cl": 4112.2
+    },
+    "HAVELLS": {
+      "avgScore": -0.48,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.22,
+      "latestScore": -0.21,
+      "latestLabel": "Neutral",
+      "cl": 1281.7
+    },
+    "HCLTECH": {
+      "avgScore": -1.72,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.41,
+      "latestScore": -3.98,
+      "latestLabel": "Strong Bearish",
+      "cl": 1451.2
+    },
+    "HDFCAMC": {
+      "avgScore": -0.66,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.75,
+      "latestScore": 1.45,
+      "latestLabel": "Bullish",
+      "cl": 2619.3
+    },
+    "HDFCBANK": {
+      "avgScore": -0.91,
+      "trend": "Mild Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.1,
+      "latestScore": -0.17,
+      "latestLabel": "Neutral",
+      "cl": 810.3
+    },
+    "HDFCLIFE": {
+      "avgScore": -0.86,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.09,
+      "latestScore": 0.52,
+      "latestLabel": "Mild Bullish",
+      "cl": 604.15
+    },
+    "HEROMOTOCO": {
+      "avgScore": -0.13,
+      "trend": "Neutral",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.11,
+      "latestScore": 1.9,
+      "latestLabel": "Bullish",
+      "cl": 5466.5
+    },
+    "HINDALCO": {
+      "avgScore": -0.72,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 6.97,
+      "latestScore": -2.65,
+      "latestLabel": "Strong Bearish",
+      "cl": 992.1
+    },
+    "HINDPETRO": {
+      "avgScore": -1.11,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 9.92,
+      "latestScore": -2.24,
+      "latestLabel": "Strong Bearish",
+      "cl": 360.6
+    },
+    "HINDUNILVR": {
+      "avgScore": -0.48,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.38,
+      "latestScore": -0.72,
+      "latestLabel": "Mild Bearish",
+      "cl": 2155.3
+    },
+    "HINDZINC": {
+      "avgScore": -1.37,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.32,
+      "latestScore": -2.6,
+      "latestLabel": "Strong Bearish",
+      "cl": 564.55
+    },
+    "HUDCO": {
+      "avgScore": -0.5,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.52,
+      "latestScore": -2.04,
+      "latestLabel": "Strong Bearish",
+      "cl": 183.96
+    },
+    "HYUNDAI": {
+      "avgScore": -1.33,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.2,
+      "latestScore": -1.21,
+      "latestLabel": "Bearish",
+      "cl": 1796.3
+    },
+    "ICICIBANK": {
+      "avgScore": 0.11,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.35,
+      "latestScore": 1.6,
+      "latestLabel": "Bullish",
+      "cl": 1321.9
+    },
+    "ICICIGI": {
+      "avgScore": -0.45,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 4.26,
+      "latestScore": -1.31,
+      "latestLabel": "Bearish",
+      "cl": 1786
+    },
+    "ICICIPRULI": {
+      "avgScore": -0.45,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.61,
+      "latestScore": -1.58,
+      "latestLabel": "Bearish",
+      "cl": 547
+    },
+    "IDEA": {
+      "avgScore": -1.34,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.59,
+      "latestScore": -1.42,
+      "latestLabel": "Bearish",
+      "cl": 9.25
+    },
+    "IDFCFIRSTB": {
+      "avgScore": -0.72,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.4,
+      "latestScore": -1.14,
+      "latestLabel": "Bearish",
+      "cl": 66.21
+    },
+    "IEX": {
+      "avgScore": -1.86,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.04,
+      "latestScore": -3.1,
+      "latestLabel": "Strong Bearish",
+      "cl": 129.99
+    },
+    "INDHOTEL": {
+      "avgScore": -0.22,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.74,
+      "latestScore": 0.19,
+      "latestLabel": "Neutral",
+      "cl": 641.5
+    },
+    "INDIANB": {
+      "avgScore": -0.93,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.55,
+      "latestScore": 0.37,
+      "latestLabel": "Mild Bullish",
+      "cl": 967.8
+    },
+    "INDIGO": {
+      "avgScore": -1.35,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 5.61,
+      "latestScore": 0.56,
+      "latestLabel": "Mild Bullish",
+      "cl": 4554.2
+    },
+    "INDUSINDBK": {
+      "avgScore": -1.87,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.69,
+      "latestScore": -0.69,
+      "latestLabel": "Mild Bearish",
+      "cl": 830.9
+    },
+    "INDUSTOWER": {
+      "avgScore": -1.85,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.9,
+      "latestScore": -2.74,
+      "latestLabel": "Strong Bearish",
+      "cl": 437.85
+    },
+    "INFY": {
+      "avgScore": -2.27,
+      "trend": "Strong Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": -1.05,
+      "latestScore": -3.98,
+      "latestLabel": "Strong Bearish",
+      "cl": 1292.5
+    },
+    "INOXWIND": {
+      "avgScore": -0.93,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.33,
+      "latestScore": -0.45,
+      "latestLabel": "Mild Bearish",
+      "cl": 86.88
+    },
+    "IOC": {
+      "avgScore": -1.16,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.64,
+      "latestScore": -1.88,
+      "latestLabel": "Bearish",
+      "cl": 142.96
+    },
+    "IREDA": {
+      "avgScore": -1.95,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 7.04,
+      "latestScore": -3.67,
+      "latestLabel": "Strong Bearish",
+      "cl": 123.72
+    },
+    "IRFC": {
+      "avgScore": -1.18,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 8.13,
+      "latestScore": -1.14,
+      "latestLabel": "Bearish",
+      "cl": 100.26
+    },
+    "ITC": {
+      "avgScore": -0.95,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.19,
+      "latestScore": -2.41,
+      "latestLabel": "Strong Bearish",
+      "cl": 304.25
+    },
+    "JINDALSTEL": {
+      "avgScore": -0.72,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.5,
+      "latestScore": 0.01,
+      "latestLabel": "Neutral",
+      "cl": 1219.1
+    },
+    "JIOFIN": {
+      "avgScore": -1.46,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.35,
+      "latestScore": -0.02,
+      "latestLabel": "Neutral",
+      "cl": 243.2
+    },
+    "JSWENERGY": {
+      "avgScore": -2.64,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": -1.58,
+      "latestScore": -2.79,
+      "latestLabel": "Strong Bearish",
+      "cl": 488.85
+    },
+    "JSWSTEEL": {
+      "avgScore": -0.26,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.16,
+      "latestScore": -2,
+      "latestLabel": "Strong Bearish",
+      "cl": 1214.8
+    },
+    "JUBLFOOD": {
+      "avgScore": -2.12,
+      "trend": "Strong Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": -3.49,
+      "latestScore": 0.68,
+      "latestLabel": "Mild Bullish",
+      "cl": 445
+    },
+    "KALYANKJIL": {
+      "avgScore": -1.35,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.85,
+      "latestScore": -2.28,
+      "latestLabel": "Strong Bearish",
+      "cl": 449.15
+    },
+    "KAYNES": {
+      "avgScore": -2.42,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.13,
+      "latestScore": -2.88,
+      "latestLabel": "Strong Bearish",
+      "cl": 3896.3
+    },
+    "KEI": {
+      "avgScore": -1.81,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.16,
+      "latestScore": -2.87,
+      "latestLabel": "Strong Bearish",
+      "cl": 4459.1
+    },
+    "KFINTECH": {
+      "avgScore": -3.26,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": -0.9,
+      "latestScore": -0.6,
+      "latestLabel": "Mild Bearish",
+      "cl": 911.45
+    },
+    "KOTAKBANK": {
+      "avgScore": -1.39,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.88,
+      "latestScore": -1.66,
+      "latestLabel": "Bearish",
+      "cl": 374.55
+    },
+    "KPITTECH": {
+      "avgScore": -1.49,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.11,
+      "latestScore": -3.28,
+      "latestLabel": "Strong Bearish",
+      "cl": 716.45
+    },
+    "LAURUSLABS": {
+      "avgScore": -1.43,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.79,
+      "latestScore": -0.99,
+      "latestLabel": "Mild Bearish",
+      "cl": 1098.35
+    },
+    "LICHSGFIN": {
+      "avgScore": -1.33,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.72,
+      "latestScore": -2.5,
+      "latestLabel": "Strong Bearish",
+      "cl": 531.65
+    },
+    "LICI": {
+      "avgScore": -1.1,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.17,
+      "latestScore": -1.76,
+      "latestLabel": "Bearish",
+      "cl": 798.35
+    },
+    "LODHA": {
+      "avgScore": 0.72,
+      "trend": "Mild Bullish",
+      "consistencyPct": 100,
+      "daysTracked": 4,
+      "weekChange": 16.37,
+      "latestScore": 1.22,
+      "latestLabel": "Bullish",
+      "cl": 826.6
+    },
+    "LT": {
+      "avgScore": -1.4,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.23,
+      "latestScore": -0.59,
+      "latestLabel": "Mild Bearish",
+      "cl": 3959.9
+    },
+    "LTF": {
+      "avgScore": -1.1,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.99,
+      "latestScore": -0.3,
+      "latestLabel": "Mild Bearish",
+      "cl": 278.42
+    },
+    "LTM": {
+      "avgScore": -1.56,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.56,
+      "latestScore": -4.19,
+      "latestLabel": "Strong Bearish",
+      "cl": 4503.7
+    },
+    "LUPIN": {
+      "avgScore": -0.57,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 2.36,
+      "latestScore": -0.41,
+      "latestLabel": "Mild Bearish",
+      "cl": 2333.7
+    },
+    "M&M": {
+      "avgScore": -0.76,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.89,
+      "latestScore": 1.02,
+      "latestLabel": "Bullish",
+      "cl": 3259.9
+    },
+    "MANAPPURAM": {
+      "avgScore": -1.57,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.92,
+      "latestScore": -0.07,
+      "latestLabel": "Neutral",
+      "cl": 267.6
+    },
+    "MANKIND": {
+      "avgScore": -0.89,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.04,
+      "latestScore": -1,
+      "latestLabel": "Bearish",
+      "cl": 2079
+    },
+    "MARICO": {
+      "avgScore": -0.42,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 1.69,
+      "latestScore": 0.53,
+      "latestLabel": "Mild Bullish",
+      "cl": 763.25
+    },
+    "MARUTI": {
+      "avgScore": -0.61,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.05,
+      "latestScore": -2.12,
+      "latestLabel": "Strong Bearish",
+      "cl": 13709
+    },
+    "MAXHEALTH": {
+      "avgScore": -1.48,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.33,
+      "latestScore": -2.56,
+      "latestLabel": "Strong Bearish",
+      "cl": 953.35
+    },
+    "MAZDOCK": {
+      "avgScore": -0.77,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.76,
+      "latestScore": -1.52,
+      "latestLabel": "Bearish",
+      "cl": 2470.1
+    },
+    "MCX": {
+      "avgScore": -1.39,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.72,
+      "latestScore": -2.51,
+      "latestLabel": "Strong Bearish",
+      "cl": 2669.3
+    },
+    "MFSL": {
+      "avgScore": -0.07,
+      "trend": "Neutral",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 10.41,
+      "latestScore": 0.86,
+      "latestLabel": "Mild Bullish",
+      "cl": 1654.8
+    },
+    "MIDCPNIFTY": {
+      "avgScore": -0.62,
+      "trend": "Mild Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.54,
+      "latestScore": -0.55,
+      "latestLabel": "Mild Bearish",
+      "cl": 13406.35
+    },
+    "MOTHERSON": {
+      "avgScore": 0,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 12.84,
+      "latestScore": 1.35,
+      "latestLabel": "Bullish",
+      "cl": 122.16
+    },
+    "MOTILALOFS": {
+      "avgScore": -0.37,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 10.46,
+      "latestScore": 0.37,
+      "latestLabel": "Mild Bullish",
+      "cl": 778.55
+    },
+    "MPHASIS": {
+      "avgScore": -0.65,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 4.09,
+      "latestScore": -2.94,
+      "latestLabel": "Strong Bearish",
+      "cl": 2326.7
+    },
+    "MUTHOOTFIN": {
+      "avgScore": -1.66,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 8.64,
+      "latestScore": -0.02,
+      "latestLabel": "Neutral",
+      "cl": 3573.9
+    },
+    "NAM-INDIA": {
+      "avgScore": -0.67,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 13.77,
+      "latestScore": 1.48,
+      "latestLabel": "Bullish",
+      "cl": 955.3
+    },
+    "NATIONALUM": {
+      "avgScore": -0.74,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 2.24,
+      "latestScore": -1.55,
+      "latestLabel": "Bearish",
+      "cl": 417
+    },
+    "NAUKRI": {
+      "avgScore": -2.1,
+      "trend": "Strong Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": -0.34,
+      "latestScore": -2.96,
+      "latestLabel": "Strong Bearish",
+      "cl": 990.9
+    },
+    "NBCC": {
+      "avgScore": -1.32,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.74,
+      "latestScore": -1.11,
+      "latestLabel": "Bearish",
+      "cl": 89.18
+    },
+    "NESTLEIND": {
+      "avgScore": -0.62,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.74,
+      "latestScore": -0.01,
+      "latestLabel": "Neutral",
+      "cl": 1249.3
+    },
+    "NHPC": {
+      "avgScore": -2.03,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 1.22,
+      "latestScore": -3.58,
+      "latestLabel": "Strong Bearish",
+      "cl": 77.09
+    },
+    "NIFTY": {
+      "avgScore": -1.01,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 4.71,
+      "latestScore": -1.24,
+      "latestLabel": "Bearish",
+      "cl": 24050.6
+    },
+    "NIFTYNXT50": {
+      "avgScore": -0.01,
+      "trend": "Neutral",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.61,
+      "latestScore": 0.6,
+      "latestLabel": "Mild Bullish",
+      "cl": 67641.25
+    },
+    "NMDC": {
+      "avgScore": -0.67,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.51,
+      "latestScore": -2.1,
+      "latestLabel": "Strong Bearish",
+      "cl": 85.07
+    },
+    "NTPC": {
+      "avgScore": -0.91,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.84,
+      "latestScore": -2.81,
+      "latestLabel": "Strong Bearish",
+      "cl": 380.15
+    },
+    "NUVAMA": {
+      "avgScore": -0.77,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 11.25,
+      "latestScore": -2.67,
+      "latestLabel": "Strong Bearish",
+      "cl": 1306.5
+    },
+    "NYKAA": {
+      "avgScore": -1.44,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.76,
+      "latestScore": -0.47,
+      "latestLabel": "Mild Bearish",
+      "cl": 259.49
+    },
+    "OBEROIRLTY": {
+      "avgScore": -0.88,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 9.99,
+      "latestScore": -2.57,
+      "latestLabel": "Strong Bearish",
+      "cl": 1671.7
+    },
+    "OFSS": {
+      "avgScore": -1.51,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.37,
+      "latestScore": -2.87,
+      "latestLabel": "Strong Bearish",
+      "cl": 7253.5
+    },
+    "OIL": {
+      "avgScore": -1.08,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": -0.19,
+      "latestScore": -3.27,
+      "latestLabel": "Strong Bearish",
+      "cl": 471.3
+    },
+    "ONGC": {
+      "avgScore": -0.82,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 1.65,
+      "latestScore": -2.99,
+      "latestLabel": "Strong Bearish",
+      "cl": 286.5
+    },
+    "PAGEIND": {
+      "avgScore": -0.99,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.76,
+      "latestScore": -2.12,
+      "latestLabel": "Strong Bearish",
+      "cl": 36055
+    },
+    "PATANJALI": {
+      "avgScore": -2.35,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": -0.91,
+      "latestScore": -0.63,
+      "latestLabel": "Mild Bearish",
+      "cl": 467.4
+    },
+    "PAYTM": {
+      "avgScore": -1.3,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 9.2,
+      "latestScore": -0.36,
+      "latestLabel": "Mild Bearish",
+      "cl": 1123.75
+    },
+    "PERSISTENT": {
+      "avgScore": -1.95,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.22,
+      "latestScore": -4.18,
+      "latestLabel": "Strong Bearish",
+      "cl": 5427.1
+    },
+    "PETRONET": {
+      "avgScore": -1.59,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.37,
+      "latestScore": -4.02,
+      "latestLabel": "Strong Bearish",
+      "cl": 270.74
+    },
+    "PFC": {
+      "avgScore": -0.55,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.14,
+      "latestScore": -0.85,
+      "latestLabel": "Mild Bearish",
+      "cl": 434.9
+    },
+    "PGEL": {
+      "avgScore": -2.28,
+      "trend": "Strong Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.77,
+      "latestScore": -2.3,
+      "latestLabel": "Strong Bearish",
+      "cl": 486.75
+    },
+    "PHOENIXLTD": {
+      "avgScore": 0.09,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 13.43,
+      "latestScore": 0.8,
+      "latestLabel": "Mild Bullish",
+      "cl": 1763.5
+    },
+    "PIDILITIND": {
+      "avgScore": -1.02,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.11,
+      "latestScore": -1.44,
+      "latestLabel": "Bearish",
+      "cl": 1357.2
+    },
+    "PIIND": {
+      "avgScore": -0.72,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.03,
+      "latestScore": 0.83,
+      "latestLabel": "Mild Bullish",
+      "cl": 2952.1
+    },
+    "PNB": {
+      "avgScore": -1.42,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.97,
+      "latestScore": -0.39,
+      "latestLabel": "Mild Bearish",
+      "cl": 111.79
+    },
+    "PNBHOUSING": {
+      "avgScore": -1.73,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.8,
+      "latestScore": -2.86,
+      "latestLabel": "Strong Bearish",
+      "cl": 864.75
+    },
+    "POLICYBZR": {
+      "avgScore": -1.82,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.71,
+      "latestScore": -1.48,
+      "latestLabel": "Bearish",
+      "cl": 1509.8
+    },
+    "POLYCAB": {
+      "avgScore": -0.7,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 9.66,
+      "latestScore": -1.42,
+      "latestLabel": "Bearish",
+      "cl": 7728
+    },
+    "POWERGRID": {
+      "avgScore": -0.89,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.57,
+      "latestScore": -0.61,
+      "latestLabel": "Mild Bearish",
+      "cl": 302.75
+    },
+    "POWERINDIA": {
+      "avgScore": -0.49,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 13.63,
+      "latestScore": 0.4,
+      "latestLabel": "Mild Bullish",
+      "cl": 28425
+    },
+    "PPLPHARMA": {
+      "avgScore": -2.34,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.14,
+      "latestScore": -0.56,
+      "latestLabel": "Mild Bearish",
+      "cl": 145.98
+    },
+    "PREMIERENE": {
+      "avgScore": -0.78,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.31,
+      "latestScore": -0.35,
+      "latestLabel": "Mild Bearish",
+      "cl": 975.2
+    },
+    "PRESTIGE": {
+      "avgScore": -0.16,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 11.75,
+      "latestScore": -2.59,
+      "latestLabel": "Strong Bearish",
+      "cl": 1322.4
+    },
+    "RBLBANK": {
+      "avgScore": -2.66,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 1.26,
+      "latestScore": -2,
+      "latestLabel": "Strong Bearish",
+      "cl": 322.15
+    },
+    "RECLTD": {
+      "avgScore": -0.83,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.79,
+      "latestScore": -2.17,
+      "latestLabel": "Strong Bearish",
+      "cl": 349.8
+    },
+    "RELIANCE": {
+      "avgScore": -1.19,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.49,
+      "latestScore": -0.1,
+      "latestLabel": "Neutral",
+      "cl": 1350.2
+    },
+    "RVNL": {
+      "avgScore": -2.79,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.14,
+      "latestScore": -3.45,
+      "latestLabel": "Strong Bearish",
+      "cl": 275
+    },
+    "SAIL": {
+      "avgScore": -1.04,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 3.48,
+      "latestScore": -0.01,
+      "latestLabel": "Neutral",
+      "cl": 166.02
+    },
+    "SAMMAANCAP": {
+      "avgScore": -1.62,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.73,
+      "latestScore": -1.75,
+      "latestLabel": "Bearish",
+      "cl": 155.85
+    },
+    "SBICARD": {
+      "avgScore": -1.26,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.68,
+      "latestScore": -1.87,
+      "latestLabel": "Bearish",
+      "cl": 677.5
+    },
+    "SBILIFE": {
+      "avgScore": -0.92,
+      "trend": "Mild Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 4.7,
+      "latestScore": -1.98,
+      "latestLabel": "Bearish",
+      "cl": 1923.2
+    },
+    "SBIN": {
+      "avgScore": -1.11,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.29,
+      "latestScore": 0.88,
+      "latestLabel": "Mild Bullish",
+      "cl": 1066.7
+    },
+    "SENSEX": {
+      "avgScore": -0.57,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.65,
+      "latestScore": -0.76,
+      "latestLabel": "Mild Bearish",
+      "cl": 77550.25
+    },
+    "SENSEX50": {
+      "avgScore": -0.71,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.75,
+      "latestScore": -0.89,
+      "latestLabel": "Mild Bearish",
+      "cl": 25149.98
+    },
+    "SHREECEM": {
+      "avgScore": -2.16,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.72,
+      "latestScore": -0.77,
+      "latestLabel": "Mild Bearish",
+      "cl": 24340
+    },
+    "SHRIRAMFIN": {
+      "avgScore": -0.82,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 10.73,
+      "latestScore": 0.63,
+      "latestLabel": "Mild Bullish",
+      "cl": 1027.55
+    },
+    "SIEMENS": {
+      "avgScore": 0.01,
+      "trend": "Neutral",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 11.17,
+      "latestScore": 1.22,
+      "latestLabel": "Bullish",
+      "cl": 3388.5
+    },
+    "SOLARINDS": {
+      "avgScore": -0.85,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.79,
+      "latestScore": -2.18,
+      "latestLabel": "Strong Bearish",
+      "cl": 14073
+    },
+    "SONACOMS": {
+      "avgScore": -0.69,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.8,
+      "latestScore": 2.09,
+      "latestLabel": "Strong Bullish",
+      "cl": 554.25
+    },
+    "SRF": {
+      "avgScore": -1.52,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 1.62,
+      "latestScore": 0.79,
+      "latestLabel": "Mild Bullish",
+      "cl": 2473.3
+    },
+    "SUNPHARMA": {
+      "avgScore": -1.07,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": -2.34,
+      "latestScore": -3.13,
+      "latestLabel": "Strong Bearish",
+      "cl": 1654.9
+    },
+    "SUPREMEIND": {
+      "avgScore": -0.93,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.55,
+      "latestScore": -1.56,
+      "latestLabel": "Bearish",
+      "cl": 3802.4
+    },
+    "SUZLON": {
+      "avgScore": -0.23,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 8.97,
+      "latestScore": 1.1,
+      "latestLabel": "Bullish",
+      "cl": 45.32
+    },
+    "SWIGGY": {
+      "avgScore": -2.32,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 1.18,
+      "latestScore": -1.65,
+      "latestLabel": "Bearish",
+      "cl": 275
+    },
+    "SX40": {
+      "avgScore": -0.62,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.25,
+      "latestScore": -0.7,
+      "latestLabel": "Mild Bearish",
+      "cl": 45063.15
+    },
+    "TATACONSUM": {
+      "avgScore": -0.67,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.65,
+      "latestScore": -1.08,
+      "latestLabel": "Bearish",
+      "cl": 1093.7
+    },
+    "TATAELXSI": {
+      "avgScore": -1.7,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.05,
+      "latestScore": -3.81,
+      "latestLabel": "Strong Bearish",
+      "cl": 4445.2
+    },
+    "TATAPOWER": {
+      "avgScore": -0.48,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.04,
+      "latestScore": -0.95,
+      "latestLabel": "Mild Bearish",
+      "cl": 399.35
+    },
+    "TATASTEEL": {
+      "avgScore": -0.66,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.36,
+      "latestScore": -1.9,
+      "latestLabel": "Bearish",
+      "cl": 206.61
+    },
+    "TATATECH": {
+      "avgScore": -0.74,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 4.22,
+      "latestScore": -1.4,
+      "latestLabel": "Bearish",
+      "cl": 566.25
+    },
+    "TCS": {
+      "avgScore": -1.33,
+      "trend": "Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 2.04,
+      "latestScore": -3.93,
+      "latestLabel": "Strong Bearish",
+      "cl": 2524.3
+    },
+    "TECHM": {
+      "avgScore": -1.41,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": -0.64,
+      "latestScore": -3.12,
+      "latestLabel": "Strong Bearish",
+      "cl": 1440.2
+    },
+    "TIINDIA": {
+      "avgScore": -1.12,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.27,
+      "latestScore": -3.7,
+      "latestLabel": "Strong Bearish",
+      "cl": 2744.8
+    },
+    "TITAN": {
+      "avgScore": -1.15,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.1,
+      "latestScore": -0.27,
+      "latestLabel": "Neutral",
+      "cl": 4504.9
+    },
+    "TMPV": {
+      "avgScore": -0.15,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 11.45,
+      "latestScore": 0.48,
+      "latestLabel": "Mild Bullish",
+      "cl": 342.6
+    },
+    "TORNTPHARM": {
+      "avgScore": -0.52,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 3.58,
+      "latestScore": -0.92,
+      "latestLabel": "Mild Bearish",
+      "cl": 4155.2
+    },
+    "TORNTPOWER": {
+      "avgScore": -0.47,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.71,
+      "latestScore": -0.39,
+      "latestLabel": "Mild Bearish",
+      "cl": 1471.7
+    },
+    "TRENT": {
+      "avgScore": -2.6,
+      "trend": "Strong Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 2.16,
+      "latestScore": -0.5,
+      "latestLabel": "Mild Bearish",
+      "cl": 3916.5
+    },
+    "TVSMOTOR": {
+      "avgScore": 0.09,
+      "trend": "Neutral",
+      "consistencyPct": 75,
+      "daysTracked": 4,
+      "weekChange": 10.1,
+      "latestScore": 0.99,
+      "latestLabel": "Mild Bullish",
+      "cl": 3839.9
+    },
+    "ULTRACEMCO": {
+      "avgScore": -1.5,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.79,
+      "latestScore": -1.05,
+      "latestLabel": "Bearish",
+      "cl": 11589
+    },
+    "UNIONBANK": {
+      "avgScore": -1.32,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 8.56,
+      "latestScore": -0.37,
+      "latestLabel": "Mild Bearish",
+      "cl": 189.03
+    },
+    "UNITDSPR": {
+      "avgScore": -0.96,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.58,
+      "latestScore": -0.61,
+      "latestLabel": "Mild Bearish",
+      "cl": 1268.2
+    },
+    "UNOMINDA": {
+      "avgScore": -1.6,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 2.82,
+      "latestScore": 0.02,
+      "latestLabel": "Neutral",
+      "cl": 1078
+    },
+    "UPL": {
+      "avgScore": -1,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 6.1,
+      "latestScore": -2.5,
+      "latestLabel": "Strong Bearish",
+      "cl": 644.85
+    },
+    "VBL": {
+      "avgScore": -0.19,
+      "trend": "Neutral",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 7.66,
+      "latestScore": 0.76,
+      "latestLabel": "Mild Bullish",
+      "cl": 431.7
+    },
+    "VEDL": {
+      "avgScore": -0.01,
+      "trend": "Neutral",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 7.99,
+      "latestScore": -1.48,
+      "latestLabel": "Bearish",
+      "cl": 745.15
+    },
+    "VMM": {
+      "avgScore": -1.88,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 0.67,
+      "latestScore": 0.62,
+      "latestLabel": "Mild Bullish",
+      "cl": 114.5
+    },
+    "VOLTAS": {
+      "avgScore": -1.47,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 5.08,
+      "latestScore": -0.07,
+      "latestLabel": "Neutral",
+      "cl": 1315.6
+    },
+    "WAAREEENER": {
+      "avgScore": -0.76,
+      "trend": "Mild Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 6.38,
+      "latestScore": -0.81,
+      "latestLabel": "Mild Bearish",
+      "cl": 3281.4
+    },
+    "WIPRO": {
+      "avgScore": -1.69,
+      "trend": "Bearish",
+      "consistencyPct": 25,
+      "daysTracked": 4,
+      "weekChange": 3.85,
+      "latestScore": -2.47,
+      "latestLabel": "Strong Bearish",
+      "cl": 204.88
+    },
+    "YESBANK": {
+      "avgScore": -1.28,
+      "trend": "Bearish",
+      "consistencyPct": 0,
+      "daysTracked": 4,
+      "weekChange": 5.12,
+      "latestScore": -1.64,
+      "latestLabel": "Bearish",
+      "cl": 19.08
+    },
+    "ZYDUSLIFE": {
+      "avgScore": -0.34,
+      "trend": "Mild Bearish",
+      "consistencyPct": 50,
+      "daysTracked": 4,
+      "weekChange": 5.67,
+      "latestScore": -0.88,
+      "latestLabel": "Mild Bearish",
+      "cl": 915.4
+    }
+  }
+}
