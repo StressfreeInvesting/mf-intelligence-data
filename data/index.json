@@ -8,10 +8,12 @@
     "2026-04-07",
     "2026-04-08",
     "2026-04-09",
-    "2026-04-10"
+    "2026-04-10",
+    "2026-04-13"
   ],
-  "lastUpdated": "2026-04-12T21:51:05.651336Z",
-  "totalUploads": 9,
-  "latestDate": "2026-04-10",
-  "latestStockCount": 0
+  "lastUpdated": "2026-04-13T14:59:57.234859Z",
+  "totalUploads": 10,
+  "latestDate": "2026-04-13",
+  "latestStockCount": 0,
+  "version": "V10"
 }
