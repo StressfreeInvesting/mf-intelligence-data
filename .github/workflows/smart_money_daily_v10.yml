@@ -1,19 +1,14 @@
 name: Smart Money Daily Fetch V10
 
-# Runs at 7:00 PM IST (13:30 UTC) Mon–Fri after market close.
-# Also manually triggerable — useful if you upload your own CSV instead.
+# Runs on schedule Mon–Fri and on every CSV push to data/uploads/.
+# Also manually triggerable via workflow_dispatch.
 #
-# REQUIRED SECRETS (set in app repo → Settings → Secrets → Actions):
-#   DATA_REPO_PAT       — GitHub PAT with contents:write on the data repo
+# NO SECRETS REQUIRED — uses GITHUB_TOKEN (automatic, permanent, no expiry).
 #
-# OPTIONAL SECRETS (for new V10 features):
-#   SENDGRID_API_KEY    — SendGrid API key for weekly digest email (#12)
-#   DIGEST_EMAIL_TO     — recipient email address for weekly digest
+# OPTIONAL SECRETS (only if you want weekly digest email):
+#   SENDGRID_API_KEY    — SendGrid API key
+#   DIGEST_EMAIL_TO     — recipient email address
 #   DIGEST_EMAIL_FROM   — sender email address (must be verified in SendGrid)
-#
-# REQUIRED VARS:
-#   GITHUB_OWNER    — your GitHub username
-#   GITHUB_REPO     — data repo name (default: mf-intelligence-data)
 
 on:
   schedule:
@@ -22,7 +17,7 @@ on:
     - cron: '00 7  * * 1-5'   # 12:30 PM IST — midday
     - cron: '00 9  * * 1-5'   # 2:30 PM IST  — mid-session
     - cron: '00 10 * * 1-5'   # 3:30 PM IST  — pre-close
-    - cron: '30 9 * * 1-5'   # 4:00 PM IST  — market close
+    - cron: '30 10 * * 1-5'   # 4:00 PM IST  — market close
     - cron: '30 13 * * 1-5'   # 7:00 PM IST  — after market close
   push:
     paths:
@@ -56,6 +51,8 @@ jobs:
   fetch-and-push:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    permissions:
+      contents: write   # needed for git push back to this repo using GITHUB_TOKEN
 
     steps:
       - name: Checkout data repo
@@ -1679,4 +1676,3 @@ jobs:
           else
             echo "**Status:** ❌ fno_signals.json not written" >> $GITHUB_STEP_SUMMARY
           fi
-
