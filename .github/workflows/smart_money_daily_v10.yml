@@ -1551,8 +1551,12 @@ jobs:
           git config user.name  "smart-money-bot"
           git config user.email "bot@mf-intelligence"
           git add -A
-          git diff --cached --quiet && echo "Nothing changed" || \
-            (git commit -m "data: smart money V10 $(date -u +'%Y-%m-%d %H:%M UTC')" && git push)
+          git diff --cached --quiet && echo "Nothing changed" || (
+            git commit -m "data: smart money V10 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            # Pull rebase first to avoid rejection when multiple runs overlap
+            git pull --rebase origin main
+            git push origin main
+          )
 
       # ── #12 WEEKLY DIGEST EMAIL (every Friday at 7PM IST) ──────────
       - name: Send Weekly Digest Email
