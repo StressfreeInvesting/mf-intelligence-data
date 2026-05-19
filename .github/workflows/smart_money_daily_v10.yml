@@ -540,53 +540,87 @@ jobs:
           # ── Parse CM Bhavcopy with Delivery (sec_bhavdata_full_DDMMYYYY.csv) ──
           # Source: NSE Archives → Capital Market → Bhavcopy with Delivery
           # URL: https://archives.nseindia.com/products/content/sec_bhavdata_full_DDMMYYYY.csv
-          # Columns: SYMBOL, SERIES, TTL_TRD_QNTY, DELIV_QTY, DELIV_PER
-          # Score impact: +4 pts if DELIV_PER>=60, +2 if >=45, -3 if <20 (with bullish F&O)
+          # Columns (NSE format): SYMBOL, SERIES, DATE1, PREV_CL_PR, OPEN_PRICE, HIGH_PRICE,
+          #   LOW_PRICE, LAST_PRICE, CLOSE_PRICE, TTL_TRD_QNTY, TURNOVER_LACS,
+          #   NO_OF_TRADES, DELIV_QTY, DELIV_PER
           delivery_data = {}   # sym -> delPct (float)
           if cm_bhav_files:
               cm_path = cm_bhav_files[-1]  # use newest
               print(f"Processing CM Bhavcopy: {os.path.basename(cm_path)}")
               try:
                   with open(cm_path, newline="", encoding="utf-8-sig") as fhcm:
-                      _cm_reader = csv.DictReader(fhcm)
-                      _cm_hdr = {str(h).strip().upper(): str(h).strip() for h in (_cm_reader.fieldnames or [])}
-                      print(f"  CM header: {list(_cm_hdr.keys())[:8]}")
-                      # Handle both old (DELIV_PER) and new (DELIV_QTY / TTL_TRD_QNTY) formats
-                      _has_deliv_per = any("DELIV_PER" in h.upper() for h in (_cm_reader.fieldnames or []))
-                      _fhcm2 = open(cm_path, newline="", encoding="utf-8-sig")
-                      _cm_reader2 = csv.DictReader(_fhcm2)
-                      for _r in _cm_reader2:
-                          try:
-                              # Normalize key names — strip whitespace
-                              _nr = {str(k).strip().upper(): str(v).strip() for k,v in _r.items() if k}
-                              _sym = _nr.get("SYMBOL","").strip().upper()
-                              _ser = _nr.get("SERIES","").strip().upper()
-                              if not _sym or _ser not in ("EQ","BE","BZ","SM"): continue
-                              if _has_deliv_per:
-                                  # sec_bhavdata_full format has DELIV_PER directly
-                                  _dp = _nr.get("DELIV_PER","") or _nr.get("DELIV_PER ","") or ""
-                                  _dp_val = float(_dp.replace(",","").strip()) if _dp.replace(",","").strip() else None
-                              else:
-                                  # Compute from TTL_TRD_QNTY and DELIV_QTY
-                                  def _fcm(k): return float((_nr.get(k,"") or "0").replace(",","").strip() or 0)
-                                  _tot = _fcm("TTL_TRD_QNTY") or _fcm("TOTTRDQTY")
-                                  _del = _fcm("DELIV_QTY")
-                                  _dp_val = round(_del / _tot * 100, 1) if _tot > 0 else None
-                              if _dp_val is not None and 0 <= _dp_val <= 100:
-                                  delivery_data[_sym] = _dp_val
-                          except: continue
-                      _fhcm2.close()
+                      # Peek at first line to detect separator
+                      first_line = fhcm.readline()
+                      sep = '\t' if first_line.count('\t') > first_line.count(',') else ','
+                      fhcm.seek(0)
+                      _cm_reader = csv.DictReader(fhcm, delimiter=sep)
+                      _raw_hdr = list(_cm_reader.fieldnames or [])
+                      print(f"  CM header ({len(_raw_hdr)} cols, sep={'TAB' if sep=='\\t' else 'COMMA'}): {[h.strip() for h in _raw_hdr[:10]]}")
+                      # Normalize headers for lookup
+                      _hdr_norm = {str(h).strip().upper().replace(' ','_'): str(h).strip() for h in _raw_hdr}
+                      print(f"  CM normalized keys: {list(_hdr_norm.keys())[:10]}")
+
+                      # Detect delivery column — try multiple possible names
+                      _col_deliv_per = None
+                      _col_deliv_qty = None
+                      _col_total_qty = None
+                      _col_symbol    = None
+                      _col_series    = None
+
+                      for raw_key, orig in _hdr_norm.items():
+                          rk = raw_key.upper()
+                          if 'SYMBOL' in rk and not _col_symbol: _col_symbol = orig
+                          if 'SERIES' in rk and not _col_series: _col_series = orig
+                          # Delivery percentage — direct column
+                          if rk in ('DELIV_PER','DELIVPER','DELIVERY_PER','DELIVERY_%','DELIV_%','%DELIV',
+                                    'DELIVERY_PERCENTAGE','DELIVERABLE_%','DELIV_PERCENT'): _col_deliv_per = orig
+                          # Delivery quantity
+                          if rk in ('DELIV_QTY','DELIVQTY','DELIVERY_QTY','DELIVERABLE_QTY',
+                                    'DELIVERABLE_QUANTITY','NET_TRDQTY'): _col_deliv_qty = orig
+                          # Total traded quantity
+                          if rk in ('TTL_TRD_QNTY','TOTTRDQTY','TOTAL_TRD_QNTY','TTL_QTY',
+                                    'TOTAL_QUANTITY','TRADED_QTY','NO_OF_SHRS'): _col_total_qty = orig
+
+                      print(f"  Detected columns — symbol={_col_symbol} series={_col_series} deliv_per={_col_deliv_per} deliv_qty={_col_deliv_qty} total_qty={_col_total_qty}")
+                      if not _col_symbol:
+                          print(f"  WARNING: Could not detect SYMBOL column — skipping CM Bhavcopy")
+                      else:
+                          fhcm.seek(0)
+                          _cm_reader2 = csv.DictReader(fhcm, delimiter=sep)
+                          for _r in _cm_reader2:
+                              try:
+                                  _sym  = str(_r.get(_col_symbol,'')).strip().upper()
+                                  _ser  = str(_r.get(_col_series,'')).strip().upper() if _col_series else 'EQ'
+                                  if not _sym or _ser not in ('EQ','BE','BZ','SM','N'): continue
+                                  _dp_val = None
+                                  def _fv(col): return float(str(_r.get(col,'')).replace(',','').strip() or '0') if col else 0.0
+                                  if _col_deliv_per:
+                                      raw = str(_r.get(_col_deliv_per,'')).replace(',','').strip()
+                                      if raw: _dp_val = float(raw)
+                                  elif _col_deliv_qty and _col_total_qty:
+                                      tot = _fv(_col_total_qty); dqty = _fv(_col_deliv_qty)
+                                      if tot > 0: _dp_val = round(dqty / tot * 100, 1)
+                                  if _dp_val is not None and 0 <= _dp_val <= 100:
+                                      delivery_data[_sym] = _dp_val
+                              except: continue
+                          print(f"  Delivery% parsed for {len(delivery_data)} stocks")
+                          if delivery_data:
+                              for _chk in ['SUNPHARMA','RELIANCE','HDFCBANK','ICICIBANK']:
+                                  if _chk in delivery_data:
+                                      print(f"  {_chk} delPct={delivery_data[_chk]}%")
+                          else:
+                              print(f"  WARNING: Zero delivery records extracted. All headers: {[h.strip() for h in _raw_hdr]}")
                   # Inject delivery% into signals
+                  injected = 0
                   for _sym, _dp in delivery_data.items():
                       if _sym in signals:
-                          signals[_sym]["delPct"] = _dp
-                  print(f"  Delivery% injected for {len(delivery_data)} stocks")
-                  # Spot check
-                  for _chk in ["SUNPHARMA","RELIANCE","HDFCBANK"]:
-                      if _chk in delivery_data:
-                          print(f"  {_chk} delPct={delivery_data[_chk]}%  signal_del={signals.get(_chk,{}).get('delPct')}")
+                          signals[_sym]['delPct'] = _dp
+                          injected += 1
+                  print(f"  Delivery% injected into {injected} F&O signals (of {len(delivery_data)} CM stocks)")
               except Exception as _cme:
+                  import traceback
                   print(f"  CM Bhavcopy parse error: {_cme}")
+                  print(traceback.format_exc()[-500:])
 
           # ── Build trendSeries from ALL FOVOLT files in uploads/ ──────
           # Each FOVOLT = one trading day. Loop oldest to newest, extract per-stock
