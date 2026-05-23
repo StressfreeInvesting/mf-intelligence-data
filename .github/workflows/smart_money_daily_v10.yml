@@ -19,6 +19,8 @@ on:
     - cron: '00 10 * * 1-5'   # 3:30 PM IST  — pre-close
     - cron: '30 10 * * 1-5'   # 4:00 PM IST  — market close
     - cron: '30 13 * * 1-5'   # 7:00 PM IST  — after market close
+    - cron: '00 5  12 * *'    # 10:30 AM IST on 12th every month — AMFI holdings refresh
+                               # (AMFI publishes by 10th; 12th gives buffer for all AMCs)
   push:
     paths:
       - 'data/uploads/FOVOLT_*.csv'
@@ -1579,6 +1581,330 @@ jobs:
           print(f"Updated index.json ({len(all_hist)} dates)")
           PYEOF
 
+      # ── ALWAYS-RUN: Fetch NSE supplementary data ──────────────────────
+      # Runs after BOTH manual-upload and auto-fetch paths.
+      # Fetches: Nifty/BankNifty index levels, VIX, PCR, real-time FII/DII.
+      # Merges results into fno_signals.json — no secrets needed.
+      - name: Fetch NSE supplementary data (indices, VIX, PCR)
+        run: |
+          python3 << 'SUPEOF'
+          import requests, time, json, os
+          from datetime import datetime
+
+          fno_path = 'data-repo/data/fno_signals.json'
+          if not os.path.exists(fno_path):
+              print("fno_signals.json not found — skipping supplementary fetch")
+              exit(0)
+
+          with open(fno_path) as f:
+              output = json.load(f)
+
+          NSE = "https://www.nseindia.com"
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0.0.0 Safari/537.36",
+              "Accept": "application/json, text/plain, */*",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Referer": "https://www.nseindia.com/",
+          }
+
+          indices  = output.get('indices', {})
+          pcr_data = output.get('pcr', {})
+
+          try:
+              session = requests.Session()
+              session.headers.update(HEADERS)
+              session.get(NSE, timeout=15)
+              time.sleep(2)
+
+              def nse_get(url):
+                  for _ in range(2):
+                      try:
+                          r = session.get(url, timeout=20)
+                          if r.status_code == 200: return r.json()
+                          print(f"  HTTP {r.status_code}: {url.split('/')[-1]}")
+                      except Exception as e: print(f"  Error {url.split('/')[-1]}: {e}")
+                      time.sleep(2)
+                  return None
+
+              # ── 1. All Indices (Nifty 50, Bank Nifty, VIX) ──────────
+              print("Fetching NSE all-indices (Nifty/BankNifty/VIX)...")
+              data = nse_get(NSE + "/api/allIndices")
+              if data and 'data' in data:
+                  for idx in data['data']:
+                      name = str(idx.get('indexSymbol', idx.get('index', ''))).strip().upper()
+                      try:
+                          last = float(str(idx.get('last', idx.get('lastPrice','0'))).replace(',',''))
+                          chg  = float(str(idx.get('change', idx.get('percChange','0'))).replace(',',''))
+                          prev = float(str(idx.get('previousClose', idx.get('previousDay','0'))).replace(',',''))
+                          if last > 0: indices[name] = {'last': last, 'change': chg, 'prev': prev, 'pct': round(chg,2)}
+                      except: pass
+                  nifty_keys = [k for k in indices if 'NIFTY 50' in k or k == 'NIFTY50']
+                  bnk_keys   = [k for k in indices if 'BANK NIFTY' in k or k == 'BANKNIFTY']
+                  vix_keys   = [k for k in indices if 'VIX' in k]
+                  print(f"  Nifty: {indices.get(nifty_keys[0]) if nifty_keys else 'NOT FOUND'}")
+                  print(f"  BankNifty: {indices.get(bnk_keys[0]) if bnk_keys else 'NOT FOUND'}")
+                  print(f"  VIX: {indices.get(vix_keys[0]) if vix_keys else 'NOT FOUND'}")
+              time.sleep(1)
+
+              # ── 2. Real-time FII/DII ────────────────────────────────
+              print("Fetching FII/DII real-time...")
+              fii_data = nse_get(NSE + "/api/fiidiiTradeReact")
+              if fii_data and isinstance(fii_data, list) and fii_data:
+                  latest = fii_data[0]
+                  def _fv(k): return float(str(latest.get(k,'0')).replace(',','') or 0)
+                  fii_net = round(_fv('fiiBuy') - _fv('fiiSell'), 2)
+                  dii_net = round(_fv('diiBuy') - _fv('diiSell'), 2)
+                  today_iso = datetime.utcnow().strftime('%Y-%m-%d')
+                  if fii_net or dii_net:
+                      output['fiiDii'] = {
+                          'date': today_iso, 'fii': fii_net, 'dii': dii_net,
+                          'fiiBuy': _fv('fiiBuy'), 'fiiSell': _fv('fiiSell'),
+                          'diiBuy': _fv('diiBuy'), 'diiSell': _fv('diiSell'),
+                          'source': 'nse_api'
+                      }
+                      hist = output.get('fiiDiiHistory', [])
+                      if not any(r['date'] == today_iso for r in hist):
+                          hist.append({'date': today_iso, 'd': datetime.utcnow().strftime('%a'),
+                                       'fii': fii_net, 'dii': dii_net})
+                          output['fiiDiiHistory'] = sorted(hist, key=lambda x: x['date'])[-30:]
+                      print(f"  FII net: {fii_net:,.0f} Cr | DII net: {dii_net:,.0f} Cr")
+              time.sleep(1)
+
+              # ── 3. NIFTY + BANKNIFTY PCR from option chain ──────────
+              print("Fetching PCR...")
+              for sym, api_sym in [('NIFTY','NIFTY'),('BANKNIFTY','BANKNIFTY')]:
+                  oc = nse_get(NSE + f"/api/option-chain-indices?symbol={api_sym}")
+                  if oc and 'records' in oc:
+                      records = oc['records'].get('data', [])
+                      tpo = sum(r.get('PE',{}).get('openInterest',0) for r in records if r.get('PE'))
+                      tco = sum(r.get('CE',{}).get('openInterest',0) for r in records if r.get('CE'))
+                      if tco > 0:
+                          pcr_data[sym] = round(tpo / tco, 2)
+                          print(f"  {sym} PCR: {pcr_data[sym]}")
+                  time.sleep(1)
+
+          except Exception as e:
+              print(f"Supplementary NSE fetch error: {e}")
+              import traceback; print(traceback.format_exc()[-800:])
+
+          output['indices'] = indices
+          output['pcr']     = pcr_data
+          output['meta']['supplementaryFetchAt'] = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+          output['meta']['indicesCount'] = len(indices)
+
+          with open(fno_path, 'w') as f:
+              json.dump(output, f, separators=(',',':'))
+          print(f"Supplementary update done: {len(indices)} indices, {len(pcr_data)} PCR values")
+          SUPEOF
+
+      # ── AMFI HOLDINGS AUTO-UPDATE ────────────────────────────────────
+      # Runs daily but only fetches when current holdings are stale (>25 days old
+      # or month changed). AMFI publishes by 10th; we run on 12th monthly cron too.
+      # Sources tried in order:
+      #   1. mfapi.in /mf/{code}/portfolio  (free, JSON, no auth)
+      #   2. mfapi.in /mf/search to find scheme codes dynamically
+      # Output: data-repo/data/holdings.json (loaded by the app daily)
+      - name: Fetch AMFI Holdings (monthly update)
+        run: |
+          python3 << 'HOLDEOF'
+          import requests, json, os, time
+          from datetime import datetime, date
+
+          holdings_path = 'data-repo/data/holdings.json'
+          today = date.today()
+          current_month = today.strftime('%Y-%m')
+
+          # Load existing holdings.json if it exists
+          existing = {}
+          if os.path.exists(holdings_path):
+              try:
+                  with open(holdings_path) as f:
+                      existing = json.load(f)
+              except: pass
+
+          # Check if update is needed:
+          # Update if: no existing data, OR month changed, OR data >25 days old
+          existing_month = existing.get('disclosureMonth','')
+          existing_date  = existing.get('fetchedAt','')[:10] if existing.get('fetchedAt') else ''
+          days_old = (today - date.fromisoformat(existing_date)).days if existing_date else 999
+
+          needs_update = (
+              not existing_month or
+              existing_month < current_month or
+              days_old > 25
+          )
+
+          if not needs_update:
+              print(f"Holdings are current ({existing_month}, {days_old}d old) — skipping fetch")
+              exit(0)
+
+          print(f"Holdings stale ({existing_month}, {days_old}d old) — fetching from AMFI...")
+
+          # ── Fund → mfapi.in scheme search terms ────────────────────────
+          # Each entry: fund_id: (search_query, house, aum_cr)
+          FUNDS = {
+              'hdfc_flexi':    ('HDFC Flexi Cap Fund Direct Growth',         'HDFC',     65200),
+              'sbi_blue':      ('SBI Large and Midcap Fund Direct Growth',   'SBI',      29500),
+              'icici_blue':    ('ICICI Prudential Bluechip Fund Direct',     'ICICI',    63200),
+              'ppfas':         ('Parag Parikh Flexi Cap Direct Growth',      'PPFAS',    82000),
+              'hdfc_mid':      ('HDFC Mid-Cap Opportunities Direct Growth',  'HDFC',     74900),
+              'kotak_em':      ('Kotak Emerging Equity Fund Direct Growth',  'Kotak',    53000),
+              'axis_elss':     ('Axis ELSS Tax Saver Fund Direct Growth',    'Axis',     38900),
+              'mirae_lc':      ('Mirae Asset Large Cap Fund Direct Growth',  'Mirae',    40200),
+              'hdfc_t100':     ('HDFC Top 100 Fund Direct Growth',           'HDFC',     36800),
+              'nippon_sc':     ('Nippon India Small Cap Fund Direct Growth', 'Nippon',   61000),
+              'sbi_sc':        ('SBI Small Cap Fund Direct Growth',          'SBI',      32000),
+              'hdfc_sc':       ('HDFC Small Cap Fund Direct Growth',         'HDFC',     34000),
+              'uti_flexi':     ('UTI Flexi Cap Fund Direct Growth',          'UTI',      26000),
+              'dsp_flexi':     ('DSP Flexi Cap Fund Direct Growth',          'DSP',      11000),
+              'franklin_flexi':('Franklin India Flexi Cap Direct Growth',    'Franklin', 17000),
+              'canara_flexi':  ('Canara Robeco Flexi Cap Direct Growth',     'Canara',   10500),
+              'tata_flexi':    ('Tata Flexi Cap Fund Direct Growth',         'Tata',      8500),
+              'icici_mc':      ('ICICI Prudential Midcap Fund Direct',       'ICICI',     7200),
+              'quant_sc':      ('Quant Small Cap Fund Direct Growth',        'Quant',    23000),
+              'motilal_mc':    ('Motilal Oswal Midcap Fund Direct Growth',   'Motilal',  19000),
+              'mirae_mc':      ('Mirae Asset Midcap Fund Direct Growth',     'Mirae',    14000),
+              'axis_mc':       ('Axis Midcap Fund Direct Growth',            'Axis',     26000),
+              'kotak_flexi':   ('Kotak Flexi Cap Fund Direct Growth',        'Kotak',    45000),
+          }
+
+          HEADERS = {'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}
+          BASE = 'https://api.mfapi.in'
+
+          def search_scheme(query):
+              """Find scheme code via mfapi.in search."""
+              try:
+                  r = requests.get(f'{BASE}/mf/search', params={'q': query},
+                                   headers=HEADERS, timeout=10)
+                  if r.status_code != 200: return None
+                  results = r.json()
+                  if not results: return None
+                  # Prefer Direct Growth results
+                  for res in results:
+                      name = res.get('schemeName','').lower()
+                      if 'direct' in name and 'growth' in name:
+                          return res['schemeCode']
+                  return results[0]['schemeCode']
+              except Exception as e:
+                  print(f"    Search error for {query}: {e}")
+                  return None
+
+          def fetch_portfolio(scheme_code):
+              """Try mfapi.in portfolio endpoint."""
+              try:
+                  r = requests.get(f'{BASE}/mf/{scheme_code}/portfolio',
+                                   headers=HEADERS, timeout=15)
+                  if r.status_code != 200:
+                      return None
+                  data = r.json()
+                  if data.get('status') != 'SUCCESS':
+                      return None
+                  entries = data.get('data', [])
+                  if not entries:
+                      return None
+                  # Use the latest entry
+                  latest = entries[0]
+                  holdings = latest.get('holdings', [])
+                  if not holdings:
+                      return None
+                  print(f"    Portfolio endpoint worked: {len(holdings)} holdings, date={latest.get('date')}")
+                  return holdings
+              except Exception as e:
+                  print(f"    Portfolio endpoint error: {e}")
+                  return None
+
+          def normalise_holdings(raw_holdings):
+              """Convert mfapi portfolio format to app format: {s, sec, pct}."""
+              result = []
+              for h in raw_holdings:
+                  name = (h.get('nameOfInstrument') or h.get('name') or
+                          h.get('companyName') or h.get('isinDiv') or '').strip()
+                  sector = (h.get('sector') or h.get('industryClassification') or 'Other').strip()
+                  pct = (h.get('marketValuePercentage') or h.get('percentage') or
+                         h.get('corpusPerc') or h.get('weight') or 0)
+                  try: pct = float(str(pct).replace('%','').replace(',',''))
+                  except: pct = 0
+                  if name and pct > 0:
+                      result.append({'s': name, 'sec': sector, 'pct': round(pct, 2)})
+              # Sort by pct descending, take top 25
+              result.sort(key=lambda x: -x['pct'])
+              return result[:25]
+
+          # ── Fetch each fund ─────────────────────────────────────────────
+          funds_data = existing.get('funds', {})
+          fetched = 0
+          failed  = 0
+
+          for fid, (query, house, aum) in FUNDS.items():
+              print(f"\nProcessing {fid} ({query[:40]})...")
+              time.sleep(0.5)  # Rate limit
+
+              code = search_scheme(query)
+              if not code:
+                  print(f"  Could not find scheme code — keeping existing data")
+                  failed += 1
+                  continue
+              print(f"  Found scheme code: {code}")
+
+              time.sleep(0.5)
+              raw = fetch_portfolio(code)
+
+              if not raw:
+                  print(f"  Portfolio endpoint not available for {code}")
+                  # Keep existing holdings for this fund but update metadata
+                  if fid in funds_data:
+                      funds_data[fid]['schemeCode'] = code
+                  failed += 1
+                  continue
+
+              normalised = normalise_holdings(raw)
+              if not normalised:
+                  print(f"  No usable holdings parsed")
+                  failed += 1
+                  continue
+
+              # Shift current → prev, new → current
+              prev_holdings = funds_data.get(fid, {}).get('curr', [])
+              funds_data[fid] = {
+                  'name':        query.split(' Direct')[0].split(' Growth')[0].strip(),
+                  'house':       house,
+                  'aum':         aum,
+                  'schemeCode':  code,
+                  'prev':        prev_holdings,   # last month
+                  'curr':        normalised,       # this month
+              }
+              print(f"  ✓ {len(normalised)} holdings stored (prev={len(prev_holdings)})")
+              fetched += 1
+
+          # ── Determine disclosure month ───────────────────────────────────
+          # AMFI typically publishes previous month's data (April portfolio → available May 10)
+          from datetime import timedelta
+          prev_month = (today.replace(day=1) - timedelta(days=1)).strftime('%Y-%m')
+          disclosure_month = prev_month  # Portfolio is always previous month
+
+          # ── Write holdings.json ──────────────────────────────────────────
+          output = {
+              'disclosureMonth': disclosure_month,
+              'fetchedAt':       datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'fundsTotal':      len(FUNDS),
+              'fundsFetched':    fetched,
+              'fundsFailed':     failed,
+              'portfolioApiWorking': fetched > 0,
+              'funds':           funds_data,
+          }
+
+          os.makedirs('data-repo/data', exist_ok=True)
+          with open(holdings_path, 'w') as f:
+              json.dump(output, f, separators=(',', ':'))
+
+          print(f"\n✓ holdings.json written: {fetched} funds updated, {failed} failed")
+          print(f"  Disclosure month: {disclosure_month}")
+          print(f"  Portfolio API working: {fetched > 0}")
+          if failed > 0 and fetched == 0:
+              print(f"  ⚠ Portfolio API not available — app uses static HOLDINGS as fallback")
+              print(f"    This is OK. Holdings will auto-update when mfapi.in adds portfolio support.")
+          HOLDEOF
+
       - name: Commit and push to data repo
         working-directory: data-repo
         run: |
@@ -1587,12 +1913,11 @@ jobs:
           git add -A
           git diff --cached --quiet && echo "Nothing changed" || (
             git commit -m "data: smart money V10 $(date -u +'%Y-%m-%d %H:%M UTC')"
-            # Pull rebase first to avoid rejection when multiple runs overlap
             git pull --rebase origin main
             git push origin main
           )
 
-      # ── #12 WEEKLY DIGEST EMAIL (every Friday at 7PM IST) ──────────
+
       - name: Send Weekly Digest Email
         if: |
           env.SENDGRID_API_KEY != '' &&
